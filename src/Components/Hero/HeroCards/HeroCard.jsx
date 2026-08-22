@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 
+import { getAssetUrl } from "../../utils/getAssetUrl";
+
 function HeroCard({ card }) {
+    const servicePath = `/servicios/${card.slug}`;
+
     return (
         <article className="hero-card">
             <img
-                src={card.image}
+                src={getAssetUrl(card.image)}
                 alt={card.title}
                 className="hero-card__image"
             />
@@ -21,16 +25,16 @@ function HeroCard({ card }) {
                 </h3>
 
                 <Link
-                    to={`/servicios/${card.slug}`}
+                    to={servicePath}
                     className="hero-card__button"
                     aria-label={`Ver ${card.title}`}
                 >
-                    →
+                    <span aria-hidden="true">→</span>
                 </Link>
             </div>
 
             <Link
-                to={`/servicios/${card.slug}`}
+                to={servicePath}
                 className="hero-card__link"
                 aria-label={`Conocer más sobre ${card.title}`}
             />

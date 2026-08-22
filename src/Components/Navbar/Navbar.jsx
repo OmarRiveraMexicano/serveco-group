@@ -3,11 +3,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { navigationItems } from "../data/navigation.js";
 import useMobileMenu from "../hooks/useMobileMenu.js";
 import useScrollNavbar from "../hooks/useScrollNavbar.js";
+import { getAssetUrl } from "../utils/getAssetUrl.js";
 
 import "./Navbar.css";
 
 function Navbar() {
-    const { isOpen, toggleMenu, closeMenu } = useMobileMenu();
+    const { isOpen, toggleMenu, closeMenu } =
+        useMobileMenu();
+
     const isScrolled = useScrollNavbar();
 
     const navigate = useNavigate();
@@ -37,7 +40,7 @@ function Navbar() {
                     aria-label="Ir al inicio"
                 >
                     <img
-                        src="/images/logo.svg"
+                        src={getAssetUrl("/images/logo.svg")}
                         alt="Serveco Group"
                     />
                 </button>
@@ -59,7 +62,9 @@ function Navbar() {
                                     ? "navbar__link--active"
                                     : ""
                             }`}
-                            onClick={() => goToPage(item.path)}
+                            onClick={() =>
+                                goToPage(item.path)
+                            }
                         >
                             {item.label}
                         </button>
@@ -67,8 +72,6 @@ function Navbar() {
                 </nav>
 
                 <div className="navbar__actions">
-
-
                     <button
                         type="button"
                         className="navbar__menu-button"
@@ -99,3 +102,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

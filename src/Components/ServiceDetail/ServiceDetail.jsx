@@ -1,9 +1,8 @@
-
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { services } from "../data/services";
+import { getAssetUrl } from "../utils/getAssetUrl.js";
 
 import "./ServiceDetail.css";
 
@@ -12,10 +11,13 @@ function ServiceDetail() {
 
     const service = services[serviceSlug];
 
-    const [showScrollButton, setShowScrollButton] = useState(false);
+    const [showScrollButton, setShowScrollButton] =
+        useState(false);
 
+    /*
+     * Regresa al inicio cuando se abre o cambia el servicio.
+     */
     useEffect(() => {
-        // Lleva la página al inicio cuando abre o cambia el servicio
         window.scrollTo({
             top: 0,
             left: 0,
@@ -23,6 +25,9 @@ function ServiceDetail() {
         });
     }, [serviceSlug]);
 
+    /*
+     * Controla cuándo aparece el botón flotante.
+     */
     useEffect(() => {
         const handleScroll = () => {
             setShowScrollButton(window.scrollY > 500);
@@ -35,7 +40,10 @@ function ServiceDetail() {
         });
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener(
+                "scroll",
+                handleScroll
+            );
         };
     }, []);
 
@@ -44,6 +52,15 @@ function ServiceDetail() {
             top: 0,
             behavior: "smooth",
         });
+    };
+
+    const scrollToSection = (sectionId) => {
+        document
+            .getElementById(sectionId)
+            ?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
     };
 
     if (!service) {
@@ -58,7 +75,11 @@ function ServiceDetail() {
         );
     }
 
-    const whatsappNumber = "5259476044";
+    /*
+     * 52: código de México.
+     * 5559476044: número a 10 dígitos.
+     */
+    const whatsappNumber = "525559476044";
 
     const whatsappMessage =
         `Hola, me interesa recibir información sobre el servicio de ${service.title}.`;
@@ -76,7 +97,7 @@ function ServiceDetail() {
 
             <section className="service-hero">
                 <img
-                    src={service.heroImage}
+                    src={getAssetUrl(service.heroImage)}
                     alt={service.title}
                     className="service-hero__image"
                 />
@@ -101,14 +122,17 @@ function ServiceDetail() {
                             aria-label={`Solicitar información sobre ${service.title} por WhatsApp`}
                         >
                             Solicitar información
-                            <span aria-hidden="true">→</span>
+
+                            <span aria-hidden="true">
+                                →
+                            </span>
                         </a>
                     </div>
                 </div>
             </section>
 
             {/* =========================
-                NAVEGACIÓN DE SECCIONES
+                NAVEGACIÓN INTERNA
             ========================= */}
 
             <nav
@@ -117,12 +141,15 @@ function ServiceDetail() {
             >
                 <div className="service-navigation__container">
                     {service.sections.map((section) => (
-                        <a
+                        <button
                             key={section.id}
-                            href={`#${section.id}`}
+                            type="button"
+                            onClick={() =>
+                                scrollToSection(section.id)
+                            }
                         >
                             {section.title}
-                        </a>
+                        </button>
                     ))}
                 </div>
             </nav>
@@ -136,10 +163,11 @@ function ServiceDetail() {
                     <section
                         key={section.id}
                         id={section.id}
-                        className={`service-section ${index % 2 !== 0
-                            ? "service-section--reverse"
-                            : ""
-                            }`}
+                        className={`service-section ${
+                            index % 2 !== 0
+                                ? "service-section--reverse"
+                                : ""
+                        }`}
                     >
                         <div className="service-section__content">
                             <span className="service-section__number">
@@ -165,7 +193,7 @@ function ServiceDetail() {
 
                         <div className="service-section__media">
                             <img
-                                src={section.image}
+                                src={getAssetUrl(section.image)}
                                 alt={section.title}
                                 loading="lazy"
                             />
@@ -197,9 +225,16 @@ function ServiceDetail() {
                     aria-label={`Contactar por WhatsApp sobre ${service.title}`}
                 >
                     Contactar por WhatsApp
-                    <span aria-hidden="true">→</span>
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
             </section>
+
+            {/* =========================
+                REGRESAR ARRIBA
+            ========================= */}
 
             {showScrollButton && (
                 <button
@@ -213,8 +248,6 @@ function ServiceDetail() {
                 </button>
             )}
         </main>
-
-
     );
 }
 

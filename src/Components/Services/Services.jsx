@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Services.css";
+import { getAssetUrl } from "../utils/getAssetUrl";
 
 const services = [
     {
@@ -169,7 +170,7 @@ function Services() {
                     >
                         <div className="services__media">
                             <img
-                                src={activeService.image}
+                                src={getAssetUrl(activeService.image)}
                                 alt={activeService.name}
                             />
 
