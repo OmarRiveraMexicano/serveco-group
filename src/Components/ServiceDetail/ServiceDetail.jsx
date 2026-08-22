@@ -75,11 +75,8 @@ function ServiceDetail() {
         );
     }
 
-    /*
-     * 52: código de México.
-     * 5559476044: número a 10 dígitos.
-     */
-    const whatsappNumber = "525559476044";
+
+    const whatsappNumber = "5559476044";
 
     const whatsappMessage =
         `Hola, me interesa recibir información sobre el servicio de ${service.title}.`;
