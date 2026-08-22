@@ -1,0 +1,238 @@
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    padding: 9rem 2rem 4rem;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(43, 109, 226, 0.15),
+            transparent 35%
+        ),
+        #020712;
+
+    color: #fff;
+}
+
+.contact__glow {
+    position: absolute;
+    z-index: -1;
+    top: 18%;
+    right: 10%;
+
+    width: 20rem;
+    height: 20rem;
+
+    border-radius: 50%;
+
+    background: rgba(47, 111, 227, 0.12);
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contact__container {
+    width: 100%;
+    max-width: 950px;
+
+    padding: 3.5rem;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+
+    gap: 4rem;
+
+    border: 1px solid rgba(115, 156, 229, 0.2);
+    border-radius: 24px;
+
+    background: rgba(9, 22, 42, 0.72);
+
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.contact__eyebrow {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: #4f8cff;
+
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contact__header h1 {
+    max-width: 590px;
+
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4.25rem);
+    font-weight: 400;
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+}
+
+.contact__header p {
+    max-width: 520px;
+
+    margin: 1.6rem 0 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-family: "Manrope", Arial, sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.contact__links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
+
+.contact__link {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #fff;
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact__link:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(79, 140, 255, 0.5);
+    background: rgba(79, 140, 255, 0.1);
+}
+
+.contact__icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #286bdc;
+
+    font-size: 1.15rem;
+}
+
+.contact__information {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+    font-family: "Manrope", Arial, sans-serif;
+}
+
+.contact__information strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact__information small {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.75rem;
+}
+
+.contact__arrow {
+    color: #6f9fff;
+    font-size: 1rem;
+
+    transition: transform 0.25s ease;
+}
+
+.contact__link:hover .contact__arrow {
+    transform: translate(2px, -2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 7.5rem 1.25rem 3rem;
+    }
+
+    .contact__container {
+        max-width: 560px;
+
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+        padding: 2rem;
+    }
+
+    .contact__header h1 {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__container {
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .contact__link {
+        padding: 0.85rem;
+    }
+}

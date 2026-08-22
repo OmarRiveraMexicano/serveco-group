@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">Serveco Group</title>
+  <desc id="desc">Logo horizontal de Serveco Group, Integracion de Alto Impacto</desc>
+
+  <defs>
+    <linearGradient id="servecoBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19386e"/>
+      <stop offset="0.55" stop-color="#254c8c"/>
+      <stop offset="1" stop-color="#101d3c"/>
+    </linearGradient>
+    <linearGradient id="servecoSilver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.50" stop-color="#eceef1"/>
+      <stop offset="1" stop-color="#a4a8b0"/>
+    </linearGradient>
+    <linearGradient id="servecoPerson" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f4f4f5"/>
+      <stop offset="1" stop-color="#9da1a8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Isotipo: proporción 1:1, sin estiramiento -->
+  <g transform="translate(24 25)">
+    <rect x="0" y="0" width="200" height="200" rx="39" fill="url(#servecoBlue)"/>
+
+    <!-- Pieza plateada posterior -->
+    <path d="M102 70H151C178 70 200 92 200 119V151C200 178 178 200 151 200H101V163H148C157 163 163 156 163 147V122C163 113 157 107 148 107H102Z" fill="url(#servecoSilver)"/>
+
+    <!-- Bloque negro frontal -->
+    <rect x="32" y="35" width="139" height="132" rx="28" fill="#050405"/>
+
+    <!-- Figura central -->
+    <circle cx="102" cy="55" r="18" fill="url(#servecoPerson)"/>
+    <path d="M88 91C88 81 94 76 104 76H119V162C119 185 104 200 81 200H79V101C79 94 82 91 88 91Z" fill="url(#servecoPerson)"/>
+  </g>
+
+  <!-- Logotipo tipográfico -->
+  <g fill="#ffffff">
+    <text x="270" y="117" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="400" letter-spacing="1.5">Serveco Group</text>
+    <text x="275" y="164" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" letter-spacing="7.4">INTEGRACION DE ALTO IMPACTO</text>
+  </g>
+</svg>

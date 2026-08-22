@@ -1,0 +1,167 @@
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero__content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 620px;
+
+    color: #fff;
+}
+
+/* Texto pequeño superior */
+
+.hero__eyebrow {
+    margin: 0 0 1rem;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Título principal */
+
+.hero__title {
+
+
+        margin: 1.5rem 0 1.6rem;
+
+    font-size: clamp(4rem, 5.1vw, 6rem);
+    line-height: 0.94;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-weight: 500;
+
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+
+    color: #fff;
+}
+
+.hero__title span {
+    display: block;
+}
+
+/* Descripción */
+
+.hero__description {
+    max-width: 500px;
+
+    margin: 1.7rem 0 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+
+    color: rgba(255, 255, 255, 0.74);
+}
+
+/* Botón principal */
+
+.hero__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 260px;
+
+    margin-top: 2.2rem;
+    padding: 1rem 1.4rem 1rem 1.8rem;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        135deg,
+        #173a78,
+        #2858a7
+    );
+
+    color: #fff;
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.hero__cta:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #1d478f,
+        #3167bd
+    );
+
+    box-shadow:
+        0 10px 30px rgba(38, 88, 167, 0.35);
+}
+
+.hero__cta-arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+.hero__cta {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+.hero__cta:hover .hero__cta-arrow {
+    transform: translateX(5px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+    .hero__title {
+        font-size: clamp(3.8rem, 7vw, 5.3rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__eyebrow {
+        font-size: 0.95rem;
+    }
+
+    .hero__title {
+        font-size: clamp(3rem, 13vw, 4.4rem);
+        line-height: 0.95;
+    }
+
+    .hero__description {
+        max-width: 420px;
+
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .hero__cta {
+        width: 230px;
+
+        margin-top: 1.8rem;
+        padding: 0.9rem 1.2rem 0.9rem 1.5rem;
+
+        font-size: 0.9rem;
+    }
+}
