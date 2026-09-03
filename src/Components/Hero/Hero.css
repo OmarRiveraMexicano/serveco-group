@@ -4,10 +4,8 @@
 
 .hero {
     position: relative;
-
     width: 100%;
     min-height: 100vh;
-
     overflow: hidden;
 
     background-image:
@@ -26,7 +24,7 @@
             rgba(3, 8, 18, 0.18) 75%,
             rgba(3, 8, 18, 0.72) 100%
         ),
-        url("images/hero.png");
+        var(--hero-image);
 
     background-size: cover;
     background-position: center 35%;

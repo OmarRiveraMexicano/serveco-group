@@ -22,10 +22,10 @@ function HeroContent() {
             <p className="hero__eyebrow">
                 Talento que transforma
             </p>
-<h1 className="hero__title">
-    <span>INTEGRACIÓN</span>
-    <span>DE ALTO IMPACTO</span>
-</h1>
+            <h1 className="hero__title">
+                <span>INTEGRACIÓN</span>
+                <span>DE ALTO IMPACTO</span>
+            </h1>
 
             <p className="hero__description">
                 Diseñamos soluciones estratégicas que optimizan tus
