@@ -7,18 +7,17 @@
     z-index: 3;
 
     width: 100%;
-    max-width: 620px;
+    max-width: 600px;
 
     color: #fff;
 }
 
 /* Texto pequeño superior */
-
 .hero__eyebrow {
-    margin: 0 0 1rem;
+    margin: 0 0 0.9rem;
 
     font-family: "Manrope", sans-serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.01em;
 
@@ -26,56 +25,54 @@
 }
 
 /* Título principal */
-
 .hero__title {
-
-
-        margin: 1.5rem 0 1.6rem;
-
-    font-size: clamp(4rem, 5.1vw, 6rem);
-    line-height: 0.94;
+    margin: 1rem 0 1.4rem;
 
     font-family: "Playfair Display", Georgia, serif;
 
+    font-size: clamp(3.1rem, 4vw, 4.7rem);
     font-weight: 500;
 
-    line-height: 0.94;
-    letter-spacing: -0.045em;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
 
     color: #fff;
 }
 
 .hero__title span {
     display: block;
+    white-space: nowrap;
 }
 
 /* Descripción */
-
 .hero__description {
     max-width: 500px;
 
-    margin: 1.7rem 0 0;
+    margin: 1.4rem 0 0;
 
     font-family: "Manrope", sans-serif;
-    font-size: 1rem;
+
+    font-size: 0.95rem;
     font-weight: 400;
-    line-height: 1.75;
+
+    line-height: 1.7;
 
     color: rgba(255, 255, 255, 0.74);
 }
 
 /* Botón principal */
-
 .hero__cta {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 260px;
+    width: 245px;
 
-    margin-top: 2.2rem;
-    padding: 1rem 1.4rem 1rem 1.8rem;
+    margin-top: 1.9rem;
 
+    padding: 0.95rem 1.3rem 0.95rem 1.6rem;
+
+    border: none;
     border-radius: 999px;
 
     background: linear-gradient(
@@ -85,11 +82,14 @@
     );
 
     color: #fff;
+
     text-decoration: none;
 
     font-family: "Manrope", sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 600;
+
+    cursor: pointer;
 
     transition:
         transform 0.25s ease,
@@ -111,19 +111,16 @@
 }
 
 .hero__cta-arrow {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1;
 
     transition: transform 0.25s ease;
 }
-.hero__cta {
-    border: none;
-    font: inherit;
-    cursor: pointer;
-}
+
 .hero__cta:hover .hero__cta-arrow {
     transform: translateX(5px);
 }
+
 
 /* =========================
    RESPONSIVE
@@ -131,7 +128,7 @@
 
 @media (max-width: 1024px) {
     .hero__title {
-        font-size: clamp(3.8rem, 7vw, 5.3rem);
+        font-size: clamp(2.9rem, 5vw, 4rem);
     }
 }
 
@@ -145,23 +142,28 @@
     }
 
     .hero__title {
-        font-size: clamp(3rem, 13vw, 4.4rem);
-        line-height: 0.95;
+        font-size: clamp(2.5rem, 10vw, 3.8rem);
+        line-height: 0.98;
+    }
+
+    .hero__title span {
+        white-space: normal;
     }
 
     .hero__description {
         max-width: 420px;
 
-        font-size: 0.95rem;
-        line-height: 1.65;
+        font-size: 0.92rem;
+        line-height: 1.6;
     }
 
     .hero__cta {
-        width: 230px;
+        width: 225px;
 
-        margin-top: 1.8rem;
+        margin-top: 1.7rem;
+
         padding: 0.9rem 1.2rem 0.9rem 1.5rem;
 
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 }

@@ -18,8 +18,7 @@ const contactLinks = [
         id: 2,
         label: "WhatsApp",
         username: "Envíanos un mensaje",
-        // Cambia el número. Usa código de país y sin espacios.
-        href: "https://wa.me/5259476044",
+        href: "https://wa.me/5559476044",
         icon: FiMessageCircle,
     },
     {
