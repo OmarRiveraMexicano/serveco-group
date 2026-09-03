@@ -5,7 +5,7 @@ export const heroCards = [
         id: 1,
         category: "Recursos Humanos",
         slug: "rh",
-        title: "Gestión Humana y Organizacional",
+        title: "Gestión Humana y Formación Corporativa",
         image: "/images/rh.png",
     },
     {
