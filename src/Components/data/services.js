@@ -21,7 +21,7 @@ rh: {
                 "Evaluaciones psicométricas",
                 "Perfiles especializados",
                 "Estudios socioeconómicos",
-                "Inducción y onboarding",
+                "Diseño de Onboarding",
             ],
         },
         {
@@ -48,9 +48,12 @@ rh: {
             image: "/images/rh/desarrollo-organizacional.png",
             items: [
                 "Capacitación empresarial",
+                "Team Building",
+                "Pausas Activas",
+                "Wellness Empresarial",
                 "Evaluación de desempeño",
                 "Clima organizacional",
-                "Desarrollo de liderazgo",
+                "Formación de liderazgo",
                 "Cultura y comunicación interna",
             ],
         },
@@ -72,13 +75,14 @@ rh: {
                 title: "Catering corporativo",
                 description:
                     "Propuestas gastronómicas diseñadas para cada momento de tu evento corporativo.",
-                image: "/public/images/catering/catering-corporativo.png",
+                image: "/images/catering/catering-corporativo.png",
                 items: [
                     "Coffee break corporativo",
                     "Lunch box corporativo",
                     "Comidas de 3 y 4 tiempos",
                     "Desayunos, comidas y cenas",
-                    "Canapés, bocadillos y parrilladas",
+                    "Canapés y FingerFoods",
+                    "Parrilladas",
                 ],
             },
             {
@@ -87,11 +91,12 @@ rh: {
                 title: "Producción",
                 description:
                     "Equipo, tecnología y personal especializado para producir experiencias profesionales.",
-                image: "/public/images/catering/produccion.png",
+                image: "images/catering/produccion.png",
                 items: [
                     "Mobiliario",
                     "Audio",
-                    "Display y video stands",
+                    "Display y video",
+                    "Stands",
                     "Staff operativo",
                     "DJs",
                 ],
@@ -102,7 +107,7 @@ rh: {
                 title: "Eventos temáticos corporativos",
                 description:
                     "Creamos experiencias memorables que fortalecen la cultura de tu empresa.",
-                image: "/images/catering/eventos-corporativos.png",
+                image: "/images/catering/neew.png",
                 items: [
                     "Eventos patrios y conmemorativos",
                     "Eventos corporativos de cierre de año",
@@ -129,7 +134,7 @@ rh: {
             title: "Protección personal",
             description:
                 "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
-            image: "/images/proteccion/proteccion-personal.png",
+            image: "/images/proteccion/epp.png",
             items: [
                 "Botas industriales y dieléctricas",
                 "Caretas de soldador",
@@ -149,11 +154,16 @@ rh: {
                 "Soluciones para prevenir riesgos, señalizar espacios y responder ante emergencias.",
             image: "/images/proteccion/seguridad-industrial.png",
             items: [
-                "Alarmas contra incendios",
-                "Conos de seguridad",
-                "Extintores",
-                "Lámparas",
-                "Señalizaciones",
+                "Guantes",
+                "Lentes de seguridad",
+                "Tapones auditivos",
+                "Cascos",
+                "Chalecos",
+                "Protector Facial",
+                "Impermeables",
+                "Botas",
+                "Ropa Desechable",
+                "Señalización Vial",
             ],
         },
         {
@@ -212,6 +222,7 @@ publicidad: {
                 "Cordones publicitarios",
                 "Bolsas personalizadas",
                 "Credenciales PVC",
+                "Uniformes"
             ],
         },
         {
@@ -227,6 +238,7 @@ publicidad: {
                 "Tarjetas de presentación",
                 "Banners roll up",
                 "Banderas publicitarias",
+                "Medallas"
             ],
         },
     ],
@@ -267,6 +279,7 @@ prosalud: {
                 "Nutriología",
                 "Desayunos saludables (Lunch Box)",
                 "Talleres y cursos",
+                "Formación en bienestar integral",
             ],
         },
         {
@@ -280,6 +293,7 @@ prosalud: {
                 "Campañas de vacunación",
                 "Insumos médicos",
                 "Jornadas preventivas",
+                "Jornadas de salud laboral (Semana de la Salud)",
             ],
         },
     ],

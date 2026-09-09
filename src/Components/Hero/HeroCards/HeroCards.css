@@ -9,16 +9,23 @@
     transform: translateY(50px);
 }
 
+
 /* =========================
    CARDS CONTAINER
 ========================= */
 
 .hero-slider__cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
 
     gap: 1rem;
 }
+
 
 /* =========================
    CARD
@@ -37,10 +44,20 @@
 
     background: #07111f;
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.22);
 
-    animation: hero-card-enter 0.4s ease;
+    animation:
+        hero-card-enter
+        0.4s
+        ease;
 }
+
+
+/* =========================
+   CARD IMAGE
+========================= */
 
 .hero-card__image {
     position: absolute;
@@ -51,12 +68,20 @@
 
     object-fit: cover;
 
-    transition: transform 0.5s ease;
+    transition:
+        transform
+        0.5s
+        ease;
 }
 
 .hero-card:hover .hero-card__image {
     transform: scale(1.04);
 }
+
+
+/* =========================
+   CARD OVERLAY
+========================= */
 
 .hero-card__overlay {
     position: absolute;
@@ -65,14 +90,18 @@
     background:
         linear-gradient(
             to top,
-            rgba(2, 8, 20, 0.98) 0%,
-            rgba(2, 8, 20, 0.65) 35%,
-            rgba(2, 8, 20, 0.12) 75%,
-            rgba(2, 8, 20, 0.04) 100%
+            rgba(2, 8, 20, 1) 0%,
+            rgba(2, 8, 20, 0.92) 22%,
+            rgba(2, 8, 20, 0.55) 48%,
+            rgba(2, 8, 20, 0.12) 72%,
+            rgba(2, 8, 20, 0.02) 100%
         );
 }
 
-/* Enlace invisible que vuelve clickeable toda la card */
+
+/* =========================
+   CLICKABLE CARD
+========================= */
 
 .hero-card__link {
     position: absolute;
@@ -83,51 +112,84 @@
     border-radius: inherit;
 }
 
+
 /* =========================
    CARD CONTENT
 ========================= */
 
 .hero-card__content {
     position: absolute;
+
     right: 0;
     bottom: 0;
     left: 0;
 
     z-index: 3;
 
-    padding: 1.4rem;
+    min-height: 155px;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     color: #fff;
 
     pointer-events: none;
 }
 
-.hero-card__category {
-    display: block;
 
-    color: rgba(255, 255, 255, 0.68);
-
-    font-family: "Manrope", Arial, sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-
-    letter-spacing: 0.02em;
-}
+/* =========================
+   CARD TITLE
+========================= */
 
 .hero-card__title {
-    max-width: 190px;
+    position: relative;
 
-    margin: 0.45rem 0 1.2rem;
+    width: 100%;
+    max-width: none;
+
+    margin:
+        0
+        0
+        1.3rem;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.45rem;
+
+    font-weight: 600;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.025em;
 
     color: #fff;
 
-    font-family: "Manrope", Arial, sans-serif;
-    font-size: 1.35rem;
-    font-weight: 500;
-    line-height: 1.2;
+    white-space: nowrap;
 
-    letter-spacing: -0.025em;
+    text-shadow:
+        0 2px 12px
+        rgba(0, 0, 0, 0.35);
 }
+
+
+/* Solo Gestión Humana puede partirse */
+
+.hero-card__title--long {
+    max-width: 210px;
+
+    white-space: normal;
+
+    font-size: 1.45rem;
+
+    line-height: 1.08;
+}
+
 
 /* =========================
    CARD BUTTON
@@ -146,15 +208,31 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
     border-radius: 50%;
 
-    background: rgba(41, 88, 170, 0.9);
+    background:
+        rgba(
+            41,
+            88,
+            170,
+            0.9
+        );
 
     color: #fff;
+
     text-decoration: none;
 
     font-size: 1.3rem;
+
     line-height: 1;
 
     pointer-events: auto;
@@ -162,21 +240,43 @@
     transition:
         transform 0.25s ease,
         background-color 0.25s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .hero-card__button:hover {
-    transform: translateX(3px);
+    transform:
+        translateX(3px);
 
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
+
     background: #3467c7;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            36,
+            84,
+            180,
+            0.28
+        );
 }
 
 .hero-card__button:focus-visible,
 .hero-card__link:focus-visible {
-    outline: 2px solid #7194ff;
+    outline:
+        2px solid
+        #7194ff;
+
     outline-offset: 4px;
 }
+
 
 /* =========================
    CONTROLS
@@ -204,15 +304,31 @@
 
     padding: 0;
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
+
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
 
     color: #fff;
 
     font-family: inherit;
+
     font-size: 1.2rem;
+
     line-height: 1;
 
     cursor: pointer;
@@ -226,9 +342,23 @@
 .hero-slider__arrow:hover {
     transform: scale(1.05);
 
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.12);
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.4
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
 }
+
 
 /* =========================
    DOTS
@@ -249,9 +379,16 @@
     padding: 0;
 
     border: none;
+
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.3);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.3
+        );
 
     cursor: pointer;
 
@@ -268,6 +405,7 @@
     background: #3467c7;
 }
 
+
 /* =========================
    ANIMATION
 ========================= */
@@ -275,14 +413,19 @@
 @keyframes hero-card-enter {
     from {
         opacity: 0;
-        transform: translateX(12px);
+
+        transform:
+            translateX(12px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 }
+
 
 /* =========================
    TABLET
@@ -290,23 +433,46 @@
 
 @media (max-width: 1024px) {
     .hero-slider {
-        transform: translateY(20px);
+        transform:
+            translateY(20px);
     }
 
     .hero-slider__cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
     }
 
     /* Solo mostramos dos cards */
 
-    .hero-slider__cards .hero-card:nth-child(3) {
+    .hero-slider__cards
+    .hero-card:nth-child(3) {
         display: none;
     }
 
     .hero-card {
         height: 390px;
     }
+
+    .hero-card__content {
+        min-height: 145px;
+
+        padding: 1.35rem;
+    }
+
+    .hero-card__title {
+        font-size: 1.35rem;
+    }
+
+    .hero-card__title--long {
+        max-width: 200px;
+
+        font-size: 1.35rem;
+    }
 }
+
 
 /* =========================
    MOBILE
@@ -320,20 +486,28 @@
     }
 
     .hero-slider__cards {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns:
+            minmax(0, 1fr);
 
         gap: 0;
     }
 
     /* En celular solo se muestra la card actual */
 
-    .hero-slider__cards .hero-card:nth-child(n + 2) {
+    .hero-slider__cards
+    .hero-card:nth-child(n + 2) {
         display: none;
     }
 
     .hero-card {
         width: 100%;
-        height: clamp(320px, 105vw, 390px);
+
+        height:
+            clamp(
+                320px,
+                105vw,
+                390px
+            );
 
         border-radius: 16px;
     }
@@ -343,19 +517,27 @@
     }
 
     .hero-card__content {
+        min-height: 135px;
+
         padding: 1.25rem;
     }
 
-    .hero-card__category {
-        font-size: 0.78rem;
-    }
-
     .hero-card__title {
-        max-width: 220px;
+        max-width: 100%;
 
         margin-bottom: 1rem;
 
-        font-size: 1.25rem;
+        font-size: 1.3rem;
+
+        white-space: normal;
+    }
+
+    .hero-card__title--long {
+        max-width: 230px;
+
+        font-size: 1.3rem;
+
+        white-space: normal;
     }
 
     .hero-card__button {
@@ -388,6 +570,7 @@
     }
 }
 
+
 /* =========================
    SMALL MOBILE
 ========================= */
@@ -398,13 +581,21 @@
     }
 
     .hero-card__content {
+        min-height: 125px;
+
         padding: 1rem;
     }
 
     .hero-card__title {
-        max-width: 190px;
+        max-width: 100%;
 
-        font-size: 1.15rem;
+        font-size: 1.2rem;
+    }
+
+    .hero-card__title--long {
+        max-width: 200px;
+
+        font-size: 1.2rem;
     }
 
     .hero-slider__controls {
@@ -416,6 +607,7 @@
         height: 38px;
     }
 }
+
 
 /* =========================
    REDUCED MOTION

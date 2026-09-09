@@ -550,6 +550,47 @@
     }
 }
 
+/* =========================
+   ITEMS
+========================= */
+
+.service-section__items {
+    margin: 2rem 0 0;
+    padding: 0;
+
+    display: grid;
+
+    gap: 1rem;
+
+    list-style: none;
+}
+
+
+/* Solo Seguridad Industrial */
+
+.service-section__items--two-columns {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    column-gap: 2.5rem;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+    .service-section__items--two-columns {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 @media (max-width: 768px) {
     .scroll-to-top {
         right: 1.25rem;

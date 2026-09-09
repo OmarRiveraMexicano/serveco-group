@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Services.css";
-import { getAssetUrl } from "../utils/getAssetUrl";
+
+import { getAssetUrl } from "../utils/getAssetUrl.js";
+
 
 const services = [
     {
@@ -22,9 +24,10 @@ const services = [
             "Nóminas",
             "Team building corporativo",
         ],
-        image: "/images/rh/desarrollo-organizacional.png",
+        image: "/images/rh.png",
         path: "/servicios/rh",
     },
+
     {
         id: "catering",
         number: "02",
@@ -42,9 +45,10 @@ const services = [
             "Eventos temáticos",
             "Salones, jardines y terrazas",
         ],
-        image: "/images/catering/eventos-corporativos.png",
+        image: "/images/catering.png",
         path: "/servicios/catering",
     },
+
     {
         id: "equipo-proteccion",
         number: "03",
@@ -62,9 +66,10 @@ const services = [
             "Uniformes y casacas",
             "Asesoría especializada",
         ],
-        image: "/images/proteccion/proteccion-personal.png",
+        image: "/images/proteccion.png",
         path: "/servicios/equipo-proteccion",
     },
+
     {
         id: "publicidad",
         number: "04",
@@ -82,9 +87,10 @@ const services = [
             "Papelería corporativa",
             "Banners y banderas",
         ],
-        image: "/images/publicidad/textiles.png",
+        image: "/images/publicidad.png",
         path: "/servicios/publicidad",
     },
+
     {
         id: "prosalud",
         number: "05",
@@ -102,17 +108,59 @@ const services = [
             "Insumos médicos",
             "Muebles ergonómicos",
         ],
-        image: "/images/prosalud/bienestar-fisico.png",
+        image: "/images/salud.png",
         path: "/servicios/prosalud",
     },
 ];
+
+
+const clients = [
+    {
+        name: "Allianz",
+        logo: "/images/clients/allianz.png",
+    },
+
+    {
+        name: "Amazon",
+        logo: "/images/clients/amazon.png",
+    },
+
+    {
+        name: "Bridgestone",
+        logo: "/images/clients/bridgestone.png",
+    },
+
+    {
+        name: "Coca-Cola",
+        logo: "/images/clients/cocacola.jpg",
+    },
+
+    {
+        name: "MetLife",
+        logo: "/images/clients/metlife.png",
+    },
+
+    {
+        name: "Nissan",
+        logo: "/images/clients/nissan.png",
+    }
+];
+
 
 function Services() {
     const [activeService, setActiveService] = useState(services[0]);
 
     return (
-        <section className="services" id="servicios">
+        <section
+            className="services"
+            id="servicios"
+        >
             <div className="services__container">
+
+                {/* =========================
+                    HEADER
+                ========================= */}
+
                 <header className="services__header">
                     <div>
                         <span className="services__eyebrow">
@@ -132,7 +180,13 @@ function Services() {
                     </p>
                 </header>
 
+
+                {/* =========================
+                    SERVICES
+                ========================= */}
+
                 <div className="services__layout">
+
                     <div
                         className="services__tabs"
                         role="tablist"
@@ -155,8 +209,14 @@ function Services() {
                                     setActiveService(service)
                                 }
                             >
-                                <span>{service.number}</span>
-                                <strong>{service.name}</strong>
+                                <span>
+                                    {service.number}
+                                </span>
+
+                                <strong>
+                                    {service.name}
+                                </strong>
+
                                 <span className="services__tab-arrow">
                                     →
                                 </span>
@@ -164,11 +224,14 @@ function Services() {
                         ))}
                     </div>
 
+
                     <article
                         className="services__panel"
                         key={activeService.id}
                     >
+
                         <div className="services__media">
+
                             <img
                                 src={getAssetUrl(activeService.image)}
                                 alt={activeService.name}
@@ -176,64 +239,149 @@ function Services() {
 
                             <div className="services__media-overlay" />
 
-                            <span>{activeService.number}</span>
+                            <span>
+                                {activeService.number}
+                            </span>
+
                         </div>
 
+
                         <div className="services__content">
+
                             <span className="services__category">
                                 {activeService.name}
                             </span>
 
-                            <h3>{activeService.title}</h3>
+                            <h3>
+                                {activeService.title}
+                            </h3>
 
-                            <p>{activeService.description}</p>
+                            <p>
+                                {activeService.description}
+                            </p>
+
 
                             <ul>
                                 {activeService.capabilities.map(
                                     (capability) => (
                                         <li key={capability}>
-                                            <span>✓</span>
+                                            <span>
+                                                ✓
+                                            </span>
+
                                             {capability}
                                         </li>
                                     )
                                 )}
                             </ul>
 
+
                             <Link
                                 to={activeService.path}
                                 className="services__link"
                             >
                                 Conocer el servicio
-                                <span>→</span>
+
+                                <span>
+                                    →
+                                </span>
                             </Link>
+
                         </div>
+
                     </article>
+
                 </div>
+
+
+                {/* =========================
+                    VALUES
+                ========================= */}
 
                 <div className="services__values">
-                    <div>
-                        <strong>Enfoque humano</strong>
-                        <span>Soluciones centradas en las personas.</span>
-                    </div>
 
                     <div>
-                        <strong>Resultados medibles</strong>
-                        <span>Objetivos claros y seguimiento continuo.</span>
+                        <strong>
+                            Enfoque humano
+                        </strong>
+
+                        <span>
+                            Soluciones centradas en las personas.
+                        </span>
                     </div>
 
-                    <div>
-                        <strong>Confidencialidad y ética</strong>
-                        <span>Procesos profesionales y responsables.</span>
-                    </div>
 
                     <div>
-                        <strong>Experiencia que genera valor</strong>
-                        <span>Acompañamiento especializado.</span>
+                        <strong>
+                            Resultados medibles
+                        </strong>
+
+                        <span>
+                            Objetivos claros y seguimiento continuo.
+                        </span>
                     </div>
+
+
+                    <div>
+                        <strong>
+                            Confidencialidad y ética
+                        </strong>
+
+                        <span>
+                            Procesos profesionales y responsables.
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            Experiencia que genera valor
+                        </strong>
+
+                        <span>
+                            Acompañamiento especializado.
+                        </span>
+                    </div>
+
                 </div>
+
+
+                {/* =========================
+                    CLIENTS
+                ========================= */}
+                <div className="services__clients">
+
+                    <div className="services__clients-header">
+                        <span className="services__eyebrow">
+                            Principales colaboraciones
+                        </span>
+
+                        <h3>
+                            Empresas que confían en nosotros
+                        </h3>
+                    </div>
+
+                    <div className="services__clients-strip">
+                        {clients.map((client) => (
+                            <div
+                                key={client.name}
+                                className="services__client"
+                            >
+                                <img
+                                    src={getAssetUrl(client.logo)}
+                                    alt={`Logo de ${client.name}`}
+                                    loading="lazy"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+
             </div>
         </section>
     );
 }
+
 
 export default Services;

@@ -44,6 +44,11 @@
     white-space: nowrap;
 }
 
+.hero__title span {
+    display: block;
+    white-space: nowrap;
+}
+
 /* Descripción */
 .hero__description {
     max-width: 500px;

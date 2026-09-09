@@ -23,6 +23,11 @@
     font-family: "Manrope", Arial, sans-serif;
 }
 
+.about__statement blockquote span {
+    display: block;
+    white-space: nowrap;
+}
+
 .about__glow {
     position: absolute;
     top: 10%;
@@ -408,4 +413,9 @@
     .about__experience-message {
         grid-column: auto;
     }
+    @media (max-width: 768px) {
+    .about__statement blockquote span {
+        white-space: normal;
+    }
+}
 }

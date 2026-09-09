@@ -20,7 +20,7 @@ function HeroContent() {
     return (
         <div className="hero__content">
             <p className="hero__eyebrow">
-                Talento que transforma
+                Sinergia que transforma
             </p>
             <h1 className="hero__title">
                 <span>INTEGRACIÓN</span>

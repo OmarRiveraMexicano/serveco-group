@@ -69,9 +69,13 @@ function About() {
                     </div>
 
                     <blockquote>
-                        “Soluciones integrales diseñadas para impulsar
-                        el talento y fortalecer el crecimiento de tu
-                        empresa.”
+                        <span>
+                            “Soluciones integrales diseñadas para impulsar el talento
+                        </span>
+
+                        <span>
+                            y fortalecer el crecimiento de tu empresa.”
+                        </span>
                     </blockquote>
 
                     <span className="about__statement-label">

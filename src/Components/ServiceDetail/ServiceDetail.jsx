@@ -75,7 +75,6 @@ function ServiceDetail() {
         );
     }
 
-
     const whatsappNumber = "5559476044";
 
     const whatsappMessage =
@@ -88,6 +87,7 @@ function ServiceDetail() {
 
     return (
         <main className="service-detail">
+
             {/* =========================
                 HERO
             ========================= */}
@@ -103,13 +103,18 @@ function ServiceDetail() {
 
                 <div className="service-hero__container">
                     <div className="service-hero__content">
+
                         <span className="service-hero__eyebrow">
                             {service.eyebrow}
                         </span>
 
-                        <h1>{service.title}</h1>
+                        <h1>
+                            {service.title}
+                        </h1>
 
-                        <p>{service.description}</p>
+                        <p>
+                            {service.description}
+                        </p>
 
                         <a
                             href={whatsappUrl}
@@ -124,9 +129,11 @@ function ServiceDetail() {
                                 →
                             </span>
                         </a>
+
                     </div>
                 </div>
             </section>
+
 
             {/* =========================
                 NAVEGACIÓN INTERNA
@@ -137,6 +144,7 @@ function ServiceDetail() {
                 aria-label="Secciones del servicio"
             >
                 <div className="service-navigation__container">
+
                     {service.sections.map((section) => (
                         <button
                             key={section.id}
@@ -148,15 +156,19 @@ function ServiceDetail() {
                             {section.title}
                         </button>
                     ))}
+
                 </div>
             </nav>
+
 
             {/* =========================
                 SECCIONES
             ========================= */}
 
             <div className="service-sections">
+
                 {service.sections.map((section, index) => (
+
                     <section
                         key={section.id}
                         id={section.id}
@@ -166,44 +178,67 @@ function ServiceDetail() {
                                 : ""
                         }`}
                     >
+
                         <div className="service-section__content">
+
                             <span className="service-section__number">
                                 {section.number}
                             </span>
 
-                            <h2>{section.title}</h2>
+                            <h2>
+                                {section.title}
+                            </h2>
 
-                            <p>{section.description}</p>
+                            <p>
+                                {section.description}
+                            </p>
 
-                            <ul>
+                            <ul
+                                className={
+                                    section.id === "seguridad-industrial"
+                                        ? "service-section__items service-section__items--two-columns"
+                                        : "service-section__items"
+                                }
+                            >
                                 {section.items.map((item) => (
                                     <li key={item}>
+
                                         <span aria-hidden="true">
                                             ✓
                                         </span>
 
                                         {item}
+
                                     </li>
                                 ))}
                             </ul>
+
                         </div>
 
+
                         <div className="service-section__media">
+
                             <img
                                 src={getAssetUrl(section.image)}
                                 alt={section.title}
                                 loading="lazy"
                             />
+
                         </div>
+
                     </section>
+
                 ))}
+
             </div>
+
 
             {/* =========================
                 CTA FINAL
             ========================= */}
 
             <section className="service-cta">
+
                 <div>
                     <span>
                         Hablemos de tu proyecto
@@ -227,13 +262,16 @@ function ServiceDetail() {
                         →
                     </span>
                 </a>
+
             </section>
+
 
             {/* =========================
                 REGRESAR ARRIBA
             ========================= */}
 
             {showScrollButton && (
+
                 <button
                     type="button"
                     className="scroll-to-top"
@@ -243,7 +281,9 @@ function ServiceDetail() {
                 >
                     ↑
                 </button>
+
             )}
+
         </main>
     );
 }

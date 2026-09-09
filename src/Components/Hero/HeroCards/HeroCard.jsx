@@ -5,6 +5,9 @@ import { getAssetUrl } from "../../utils/getAssetUrl";
 function HeroCard({ card }) {
     const servicePath = `/servicios/${card.slug}`;
 
+    const isLongTitle =
+        card.title === "Gestión Humana y Formación Corporativa";
+
     return (
         <article className="hero-card">
             <img
@@ -16,11 +19,14 @@ function HeroCard({ card }) {
             <div className="hero-card__overlay" />
 
             <div className="hero-card__content">
-                <span className="hero-card__category">
-                    {card.category}
-                </span>
 
-                <h3 className="hero-card__title">
+                <h3
+                    className={
+                        isLongTitle
+                            ? "hero-card__title hero-card__title--long"
+                            : "hero-card__title"
+                    }
+                >
                     {card.title}
                 </h3>
 
