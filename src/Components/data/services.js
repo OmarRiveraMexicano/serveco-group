@@ -81,7 +81,7 @@ rh: {
                     "Lunch box corporativo",
                     "Comidas de 3 y 4 tiempos",
                     "Desayunos, comidas y cenas",
-                    "Canapés y FingerFoods",
+                    "Canapés y Finger foods",
                     "Parrilladas",
                 ],
             },
