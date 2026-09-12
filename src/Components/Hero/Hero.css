@@ -253,9 +253,6 @@
 }
 
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
@@ -263,20 +260,20 @@
         background-image:
             linear-gradient(
                 180deg,
-                rgba(2, 7, 18, 0.2) 0%,
-                rgba(2, 7, 18, 0.4) 35%,
-                rgba(2, 7, 18, 0.82) 67%,
+                rgba(2, 7, 18, 0.18) 0%,
+                rgba(2, 7, 18, 0.42) 38%,
+                rgba(2, 7, 18, 0.88) 68%,
                 #020712 100%
             ),
             linear-gradient(
                 90deg,
-                rgba(2, 7, 18, 0.72),
-                rgba(2, 7, 18, 0.25)
+                rgba(2, 7, 18, 0.7),
+                rgba(2, 7, 18, 0.2)
             ),
             var(--hero-image);
 
         background-size: auto 100svh;
-        background-position: 54% top;
+        background-position: 52% top;
         background-repeat: no-repeat;
     }
 
@@ -285,89 +282,140 @@
         min-height: auto;
 
         padding:
-            6.5rem
-            1.25rem
-            4rem;
+            6.4rem
+            1rem
+            2.5rem;
 
         display: flex;
         flex-direction: column;
         align-items: stretch;
 
-        gap: 3.25rem;
+        /*
+         * Este espacio separa claramente
+         * el contenido del carrusel.
+         */
+        gap: 3.75rem;
 
         transform: none;
     }
 
     .hero__bottom {
-        display: none;
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+
+        padding: 0 1rem 1.75rem;
+
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+
+        transform: none;
+    }
+
+    .hero__socials a {
+        width: 37px;
+        height: 37px;
+    }
+
+    .hero__socials a svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .hero__container {
-        padding:
-            6.25rem
-            1rem
-            3.5rem;
+        padding-top: 6.1rem;
+        padding-bottom: 2.25rem;
 
-        gap: 3rem;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-    .hero {
-        background-position: 52% top;
-    }
-
-    .hero__container {
-        padding-top: 6.8rem;
-        padding-right: 1rem;
-        padding-bottom: 6rem;
-        padding-left: 1rem;
-
-        gap: 2rem;
+        gap: 3.5rem;
     }
 
     .hero__bottom {
-        right: 1rem;
-        bottom: 1rem;
-    }
-
-    .hero__socials a {
-        width: 36px;
-        height: 36px;
+        padding-bottom: 1.5rem;
     }
 }
-
-
-/* =========================
-   VERY SMALL MOBILE
-========================= */
 
 @media (max-width: 360px) {
     .hero__container {
-        padding-top: 6.4rem;
-        padding-bottom: 5.5rem;
-    }
+        padding-top: 5.8rem;
 
-    .hero__socials a {
-        width: 34px;
-        height: 34px;
+        gap: 3.25rem;
     }
 }
 
 
-/* =========================
-   REDUCED MOTION
-========================= */
 
-@media (prefers-reduced-motion: reduce) {
-    .hero__socials a {
-        transition: none;
+
+
+@media (max-width: 768px) {
+    .hero .hero__bottom {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        z-index: 10;
+
+        width: 100%;
+        max-width: none;
+
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0 1rem 1.75rem;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        pointer-events: auto;
+    }
+
+    .hero .hero__socials {
+        display: flex;
+        align-items: center;
+
+        gap: 0.7rem;
+
+        opacity: 1;
+        visibility: visible;
+
+        pointer-events: auto;
+    }
+
+    .hero .hero__socials a {
+        width: 38px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+
+        background: rgba(3, 10, 22, 0.7);
+
+        color: #fff;
+
+        pointer-events: auto;
+    }
+
+    .hero .hero__socials a svg {
+        width: 16px;
+        height: 16px;
     }
 }
