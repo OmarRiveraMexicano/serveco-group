@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Services.css";
 
 import { getAssetUrl } from "../utils/getAssetUrl.js";
+import usePageTitle from "../hooks/usePageTitle.js";
 
 
 const services = [
@@ -149,6 +150,7 @@ const clients = [
 
 function Services() {
     const [activeService, setActiveService] = useState(services[0]);
+    usePageTitle("Servicios");
 
     return (
         <section

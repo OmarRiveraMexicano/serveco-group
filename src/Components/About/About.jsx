@@ -1,5 +1,5 @@
 import "./About.css";
-
+import usePageTitle from "../hooks/usePageTitle.js";
 const values = [
     {
         number: "01",
@@ -28,6 +28,7 @@ const values = [
 ];
 
 function About() {
+    usePageTitle("Nosotros");
     return (
         <section className="about" id="nosotros">
             <div className="about__glow" />

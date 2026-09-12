@@ -6,6 +6,9 @@ import {
 
 import "./Contact.css";
 
+import usePageTitle from "../hooks/usePageTitle.js";
+
+
 const contactLinks = [
     {
         id: 1,
@@ -31,6 +34,8 @@ const contactLinks = [
 ];
 
 function Contact() {
+    
+usePageTitle("Contacto");
     return (
         <main className="contact">
             <div className="contact__glow" />

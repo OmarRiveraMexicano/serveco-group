@@ -7,6 +7,8 @@ import Services from "./Components/Services/Services.jsx";
 import About from "./Components/About/About.jsx";
 import Home from "./Pages/Home.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
+import PrivacyNotice from "./Components/PrivacyNotice/PrivacyNotice.jsx";
+import NotFound from "./Components/NotFound/NotFound.jsx";
 
 
 function App() {
@@ -18,11 +20,14 @@ function App() {
         <Route path="/servicios" element={<Services />} />
         <Route path="/nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/aviso-de-privacidad" element={<PrivacyNotice />} />
 
         <Route
           path="/servicios/:serviceSlug"
           element={<ServiceDetail />}
         />
+
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
 
