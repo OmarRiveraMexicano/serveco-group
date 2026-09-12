@@ -7,36 +7,50 @@
     z-index: 3;
 
     width: 100%;
-    max-width: 600px;
+    max-width: 560px;
 
     color: #fff;
 }
 
-/* Texto pequeño superior */
+
+/* =========================
+   EYEBROW
+========================= */
+
 .hero__eyebrow {
+    display: block;
+
     margin: 0 0 0.9rem;
 
-    font-family: "Manrope", sans-serif;
+    color: rgba(255, 255, 255, 0.88);
+
+    font-family: "Manrope", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    line-height: 1.5;
     letter-spacing: 0.01em;
-
-    color: rgba(255, 255, 255, 0.85);
 }
 
-/* Título principal */
+
+/* =========================
+   TITLE
+========================= */
+
 .hero__title {
-    margin: 1rem 0 1.4rem;
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: clamp(3.1rem, 4vw, 4.7rem);
-    font-weight: 500;
-
-    line-height: 0.96;
-    letter-spacing: -0.04em;
+    margin: 0 0 1.4rem;
 
     color: #fff;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.9rem, 3.8vw, 4.4rem);
+    font-weight: 500;
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+
+    text-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .hero__title span {
@@ -44,79 +58,112 @@
     white-space: nowrap;
 }
 
-.hero__title span {
-    display: block;
-    white-space: nowrap;
-}
 
-/* Descripción */
+/* =========================
+   DESCRIPTION
+========================= */
+
 .hero__description {
+    width: 100%;
     max-width: 500px;
 
-    margin: 1.4rem 0 0;
+    margin: 0;
 
-    font-family: "Manrope", sans-serif;
+    color: rgba(255, 255, 255, 0.76);
 
+    font-family: "Manrope", Arial, sans-serif;
     font-size: 0.95rem;
     font-weight: 400;
-
     line-height: 1.7;
 
-    color: rgba(255, 255, 255, 0.74);
+    text-wrap: pretty;
 }
 
-/* Botón principal */
+
+/* =========================
+   CTA
+========================= */
+
 .hero__cta {
+    width: 245px;
+
+    margin-top: 1.9rem;
+    padding: 0.95rem 1.3rem 0.95rem 1.6rem;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 245px;
-
-    margin-top: 1.9rem;
-
-    padding: 0.95rem 1.3rem 0.95rem 1.6rem;
-
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 999px;
 
-    background: linear-gradient(
-        135deg,
-        #173a78,
-        #2858a7
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #173a78 0%,
+            #2858a7 100%
+        );
 
     color: #fff;
 
-    text-decoration: none;
-
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope", Arial, sans-serif;
     font-size: 0.92rem;
     font-weight: 600;
+    line-height: 1;
+
+    text-decoration: none;
 
     cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(10, 41, 95, 0.22);
+
+    appearance: none;
+    -webkit-appearance: none;
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
-        background 0.25s ease;
+        background 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .hero__cta:hover {
-    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.14);
 
-    background: linear-gradient(
-        135deg,
-        #1d478f,
-        #3167bd
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #1d478f 0%,
+            #3167bd 100%
+        );
 
     box-shadow:
-        0 10px 30px rgba(38, 88, 167, 0.35);
+        0 14px 34px rgba(38, 88, 167, 0.35);
+
+    transform: translateY(-3px);
 }
 
+.hero__cta:active {
+    transform: translateY(-1px);
+}
+
+.hero__cta:focus-visible {
+    outline: 2px solid #7194ff;
+    outline-offset: 5px;
+}
+
+
+/* =========================
+   CTA ARROW
+========================= */
+
 .hero__cta-arrow {
-    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.35rem;
     line-height: 1;
 
     transition: transform 0.25s ease;
@@ -128,47 +175,181 @@
 
 
 /* =========================
-   RESPONSIVE
+   SMALL DESKTOP
 ========================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .hero__content {
+        max-width: 500px;
+    }
+
     .hero__title {
-        font-size: clamp(2.9rem, 5vw, 4rem);
+        font-size: clamp(2.7rem, 3.7vw, 3.8rem);
+    }
+
+    .hero__description {
+        max-width: 460px;
     }
 }
 
-@media (max-width: 768px) {
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
     .hero__content {
-        max-width: 100%;
+        max-width: 450px;
     }
 
     .hero__eyebrow {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
     }
 
     .hero__title {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 0.98;
-    }
-
-    .hero__title span {
-        white-space: normal;
+        font-size: clamp(2.5rem, 4.4vw, 3.5rem);
     }
 
     .hero__description {
         max-width: 420px;
 
-        font-size: 0.92rem;
-        line-height: 1.6;
+        font-size: 0.9rem;
+        line-height: 1.65;
     }
 
     .hero__cta {
         width: 225px;
 
         margin-top: 1.7rem;
-
         padding: 0.9rem 1.2rem 0.9rem 1.5rem;
 
         font-size: 0.88rem;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .hero__content {
+        width: min(100%, 520px);
+        max-width: 520px;
+    }
+
+    .hero__eyebrow {
+        margin-bottom: 0.7rem;
+
+        font-size: 0.82rem;
+        line-height: 1.4;
+
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .hero__title {
+        margin: 0 0 1rem;
+
+        font-size: clamp(2.6rem, 11vw, 4rem);
+        line-height: 0.91;
+        letter-spacing: -0.045em;
+
+        text-wrap: initial;
+    }
+
+    .hero__title span {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .hero__description {
+        max-width: 390px;
+
+        margin: 0;
+
+        font-size: 0.88rem;
+        line-height: 1.6;
+
+        color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero__cta {
+        width: 215px;
+
+        margin-top: 1.5rem;
+        padding: 0.88rem 1.15rem 0.88rem 1.4rem;
+
+        font-size: 0.86rem;
+
+        box-shadow:
+            0 10px 28px rgba(17, 55, 122, 0.3);
+    }
+
+    .hero__cta-arrow {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    .hero__eyebrow {
+        font-size: 0.78rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2.35rem, 10.8vw, 3.3rem);
+    }
+
+    .hero__description {
+        max-width: 350px;
+
+        font-size: 0.84rem;
+        line-height: 1.55;
+    }
+
+    .hero__cta {
+        width: 205px;
+
+        margin-top: 1.35rem;
+        padding: 0.84rem 1.1rem 0.84rem 1.3rem;
+
+        font-size: 0.83rem;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+    .hero__title {
+        font-size: clamp(2.1rem, 10.5vw, 2.7rem);
+    }
+
+    .hero__description {
+        font-size: 0.81rem;
+    }
+
+    .hero__cta {
+        width: 195px;
+
+        padding: 0.8rem 1rem 0.8rem 1.2rem;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__cta,
+    .hero__cta-arrow {
+        transition: none;
     }
 }
