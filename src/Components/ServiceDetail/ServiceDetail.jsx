@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { services } from "../data/services";
 import { getAssetUrl } from "../utils/getAssetUrl.js";
 
+import ServiceGallery from "../ServiceGallery/ServiceGallery.jsx";
+
 import "./ServiceDetail.css";
 
 function ServiceDetail() {
@@ -172,11 +174,10 @@ function ServiceDetail() {
                     <section
                         key={section.id}
                         id={section.id}
-                        className={`service-section ${
-                            index % 2 !== 0
+                        className={`service-section ${index % 2 !== 0
                                 ? "service-section--reverse"
                                 : ""
-                        }`}
+                            }`}
                     >
 
                         <div className="service-section__content">
@@ -231,6 +232,17 @@ function ServiceDetail() {
                 ))}
 
             </div>
+
+            {/* =========================
+    GALERÍA
+========================= */}
+
+            {service.galleryImages?.length > 0 && (
+                <ServiceGallery
+                    images={service.galleryImages}
+                    serviceName={service.title}
+                />
+            )}
 
 
             {/* =========================

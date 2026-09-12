@@ -8,6 +8,13 @@ rh: {
 
     heroImage: "/images/rh/hero.png",
 
+    galleryImages: [
+        "images/rh/administracion-personal.png",
+        "/images/rh/atraccion-integracion.png",
+        "images/rh/desarrollo-organizacional.png",
+        "images/gallery/rh/rh.webp",
+    ],
+
     sections: [
         {
             id: "atraccion-integracion",
@@ -68,6 +75,13 @@ rh: {
             "Soluciones integrales para eventos corporativos.",
         heroImage: "/images/catering.png",
 
+        galleryImages: [
+            "images/gallery/catering.webp",
+            "images/gallery/banquete.jpg",
+            "images/gallery/produccion.webp",
+            "images/gallery/eventos-corporativos.webp",
+        ],
+
         sections: [
             {
                 id: "catering-corporativo",
@@ -126,6 +140,13 @@ rh: {
         "Protegemos lo más importante: tu equipo.",
 
     heroImage: "/images/proteccion/hero.png",
+
+    galleryImages: [
+        "images/gallery/proteccion/seguridad.avif",
+        "images/gallery/proteccion/lentes.webp",
+        "images/gallery/proteccion/guantes.webp",
+        "images/gallery/proteccion/nose}.webp",
+    ],
 
     sections: [
         {
@@ -193,6 +214,13 @@ publicidad: {
 
     heroImage: "/images/publicidad/hero.png",
 
+    galleryImages: [
+        "images/publicidad/personalizacion.png",
+        "images/publicidad/textiles.png",
+        "images/publicidad/papeleria-exhibicion.png",
+        "images/gallery/publicidad/public.webp",
+    ],
+
     sections: [
         {
             id: "personalizacion",
@@ -251,6 +279,13 @@ prosalud: {
     description:
         "Soluciones integrales para el bienestar físico, mental y nutricional de tu equipo.",
     heroImage: "/images/salud.png",
+
+    galleryImages: [
+        "images/prosalud/bienestar-fisico.png",
+        "images/gallery/prosalud/consulta.webp",
+        "images/gallery/prosalud/nutricion.webp",
+        "images/prosalud/bienestar-fisico.png",
+    ],
 
     sections: [
         {

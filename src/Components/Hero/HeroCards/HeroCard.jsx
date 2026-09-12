@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { getAssetUrl } from "../../utils/getAssetUrl";
 
 function HeroCard({ card }) {
-    const servicePath = `/servicios/${card.slug}`;
+    const servicePath =
+        `/servicios/${card.slug}`;
 
-    const isLongTitle =
-        card.title === "Gestión Humana y Formación Corporativa";
+    const isProtectionTitle =
+        card.slug === "equipo-proteccion";
 
     return (
         <article className="hero-card">
@@ -19,11 +20,10 @@ function HeroCard({ card }) {
             <div className="hero-card__overlay" />
 
             <div className="hero-card__content">
-
                 <h3
                     className={
-                        isLongTitle
-                            ? "hero-card__title hero-card__title--long"
+                        isProtectionTitle
+                            ? "hero-card__title hero-card__title--protection"
                             : "hero-card__title"
                     }
                 >
@@ -35,7 +35,9 @@ function HeroCard({ card }) {
                     className="hero-card__button"
                     aria-label={`Ver ${card.title}`}
                 >
-                    <span aria-hidden="true">→</span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </Link>
             </div>
 

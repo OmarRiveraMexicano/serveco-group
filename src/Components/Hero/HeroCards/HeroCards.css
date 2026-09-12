@@ -192,9 +192,14 @@
 /* Únicamente para títulos largos */
 
 .hero-card__title--long {
-    max-width: 215px;
+    max-width: 100%;
+
+    font-size: 1.3rem;
+    line-height: 1.08;
 
     white-space: normal;
+
+    overflow-wrap: break-word;
 }
 
 
@@ -255,6 +260,16 @@
 .hero-card__link:focus-visible {
     outline: 2px solid #7194ff;
     outline-offset: 4px;
+}
+.hero-card__title--protection {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(1.15rem, 1.3vw, 1.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+
+    white-space: nowrap;
 }
 
 
@@ -685,6 +700,69 @@
     }
 }
 
+@media (max-width: 768px) {
+    .hero-card__title--protection {
+        font-size: clamp(0.10rem, 4vw, 1.50rem);
+
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slider__cards {
+        /*
+         * Permite el scroll vertical de la página
+         * y reconoce el movimiento horizontal.
+         */
+        touch-action: pan-y;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    .hero-card__image {
+        pointer-events: none;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    /*
+     * Oculta las flechas inferiores.
+     */
+
+    .hero-slider__arrow {
+        display: none;
+    }
+
+    /*
+     * Centra los puntos al desaparecer las flechas.
+     */
+
+    .hero-slider__controls {
+        width: calc(100% - 1.25rem);
+
+        margin-top: 1rem;
+
+        justify-content: center;
+
+        gap: 0;
+    }
+
+    .hero-slider__dots {
+        padding: 0.65rem 0.9rem;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+
+        background: rgba(3, 10, 22, 0.5);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
 
 /* =========================
    REDUCED MOTION
@@ -698,5 +776,17 @@
     .hero-slider__dot {
         animation: none;
         transition: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-card__title,
+    .hero-card__title--long {
+        max-width: 100%;
+
+        font-size: 1.15rem;
+        line-height: 1.1;
+
+        white-space: normal;
     }
 }

@@ -19,7 +19,7 @@ export const heroCards = [
         id: 3,
         category: "Artículos",
         slug: "equipo-proteccion",
-        title: "Equipo de EPP",
+        title: "Equipo Protección Personal",
         image: "/images/proteccion.png",
     },
     {

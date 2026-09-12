@@ -20,29 +20,6 @@ function Hero() {
                 <HeroCards />
             </div>
 
-            <div className="hero__bottom">
-                <div className="hero__socials">
-
-                    <a
-                        href="https://www.instagram.com/serveco_group/"
-                        aria-label="Instagram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FiInstagram />
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/company/serveco-group/"
-                        aria-label="LinkedIn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FiLinkedin />
-                    </a>
-
-                </div>
-            </div>
         </section>
     );
 }
