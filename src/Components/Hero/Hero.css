@@ -256,82 +256,61 @@
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 768px) {
     .hero {
-        min-height: 100svh;
+        min-height: auto;
 
         background-image:
             linear-gradient(
                 180deg,
-                rgba(2, 7, 18, 0.25) 0%,
-                rgba(2, 7, 18, 0.38) 28%,
-                rgba(2, 7, 18, 0.68) 62%,
-                rgba(2, 7, 18, 0.94) 100%
+                rgba(2, 7, 18, 0.2) 0%,
+                rgba(2, 7, 18, 0.4) 35%,
+                rgba(2, 7, 18, 0.82) 67%,
+                #020712 100%
             ),
             linear-gradient(
                 90deg,
-                rgba(2, 7, 18, 0.78) 0%,
-                rgba(2, 7, 18, 0.3) 100%
+                rgba(2, 7, 18, 0.72),
+                rgba(2, 7, 18, 0.25)
             ),
             var(--hero-image);
 
         background-size: auto 100svh;
-        background-position: 56% top;
+        background-position: 54% top;
         background-repeat: no-repeat;
-        background-attachment: scroll;
-    }
-
-    .hero::after {
-        height: 240px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                transparent,
-                rgba(2, 7, 18, 0.95)
-            );
     }
 
     .hero__container {
         width: 100%;
-        min-height: 100svh;
+        min-height: auto;
 
-        padding: 7.2rem 1.25rem 6.5rem;
+        padding:
+            6.5rem
+            1.25rem
+            4rem;
 
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        align-content: start;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
 
-        gap: 2.4rem;
+        gap: 3.25rem;
 
         transform: none;
     }
 
     .hero__bottom {
-        right: 1.25rem;
-        bottom: 1.25rem;
-        left: auto;
-
-        width: auto;
-
-        transform: none;
+        display: none;
     }
+}
 
-    .hero__socials {
-        gap: 0.55rem;
-    }
+@media (max-width: 480px) {
+    .hero__container {
+        padding:
+            6.25rem
+            1rem
+            3.5rem;
 
-    .hero__socials a {
-        width: 38px;
-        height: 38px;
-
-        background: rgba(4, 13, 27, 0.6);
-    }
-
-    .hero__socials a svg {
-        width: 16px;
-        height: 16px;
+        gap: 3rem;
     }
 }
 

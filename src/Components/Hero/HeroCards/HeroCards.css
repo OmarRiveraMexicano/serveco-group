@@ -701,66 +701,148 @@
 }
 
 @media (max-width: 768px) {
-    .hero-card__title--protection {
-        font-size: clamp(0.10rem, 4vw, 1.50rem);
+    .hero-slider {
+        width: calc(100% + 1rem);
 
-        white-space: nowrap;
+        margin: 0 -1rem 0 0;
+
+        overflow: hidden;
+
+        transform: none;
     }
-}
 
-@media (max-width: 768px) {
     .hero-slider__cards {
+        display: grid;
+        grid-template-columns: none;
+        grid-auto-flow: column;
+
         /*
-         * Permite el scroll vertical de la página
-         * y reconoce el movimiento horizontal.
+         * La primera card ocupa casi todo el espacio.
+         * La segunda solamente asoma un poco.
          */
+        grid-auto-columns:
+            min(
+                calc(100vw - 3rem),
+                350px
+            );
+
+        align-items: center;
+
+        gap: 0.75rem;
+
+        padding-right: 1rem;
+
         touch-action: pan-y;
 
         user-select: none;
         -webkit-user-select: none;
-        -webkit-touch-callout: none;
+    }
+
+    .hero-slider__cards .hero-card:nth-child(3) {
+        display: none;
+    }
+
+    .hero-card,
+    .hero-card:first-child {
+        width: 100%;
+        height: 390px;
+
+        border-radius: 18px;
+
+        transform: none;
+    }
+
+    .hero-card:nth-child(2) {
+        height: 365px;
+
+        opacity: 0.72;
+    }
+
+    .hero-card__content {
+        min-height: 120px;
+
+        padding: 1.15rem;
+    }
+
+    .hero-card__title {
+        max-width: calc(100% - 5px);
+
+        margin-bottom: 0.85rem;
+
+        font-size: 1.2rem;
+        line-height: 1.08;
+
+        white-space: normal;
+    }
+
+    .hero-card__title--protection {
+        font-size: 0.98rem;
+        letter-spacing: -0.04em;
+
+        white-space: nowrap;
+    }
+
+    .hero-card__button {
+        width: 39px;
+        height: 39px;
+
+        font-size: 1rem;
     }
 
     .hero-card__image {
         pointer-events: none;
 
-        user-select: none;
-        -webkit-user-select: none;
         -webkit-user-drag: none;
     }
-
-    /*
-     * Oculta las flechas inferiores.
-     */
 
     .hero-slider__arrow {
         display: none;
     }
 
-    /*
-     * Centra los puntos al desaparecer las flechas.
-     */
-
     .hero-slider__controls {
-        width: calc(100% - 1.25rem);
+        width: calc(100% - 1rem);
 
-        margin-top: 1rem;
+        margin-top: 1.15rem;
 
         justify-content: center;
-
-        gap: 0;
     }
 
     .hero-slider__dots {
-        padding: 0.65rem 0.9rem;
+        gap: 0.5rem;
+
+        padding: 0.6rem 0.85rem;
 
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 999px;
 
-        background: rgba(3, 10, 22, 0.5);
+        background: rgba(3, 10, 22, 0.52);
 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-slider__cards {
+        grid-auto-columns:
+            calc(100vw - 2.5rem);
+    }
+
+    .hero-card,
+    .hero-card:first-child {
+        height: 360px;
+    }
+
+    .hero-card:nth-child(2) {
+        height: 340px;
+    }
+
+    .hero-card__title {
+        font-size: 1.1rem;
+    }
+
+    .hero-card__title--protection {
+        font-size: 0.9rem;
     }
 }
 

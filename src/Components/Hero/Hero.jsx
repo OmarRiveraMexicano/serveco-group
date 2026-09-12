@@ -1,4 +1,7 @@
-import { FiInstagram, FiLinkedin } from "react-icons/fi";
+import {
+    FiInstagram,
+    FiLinkedin,
+} from "react-icons/fi";
 
 import HeroContent from "./HeroContent/HeroContent";
 import HeroCards from "./HeroCards/HeroCards";
@@ -12,7 +15,9 @@ function Hero() {
         <section
             className="hero"
             style={{
-                "--hero-image": `url("${getAssetUrl("images/hero.png")}")`,
+                "--hero-image": `url("${getAssetUrl(
+                    "images/hero.png"
+                )}")`,
             }}
         >
             <div className="hero__container">
@@ -20,6 +25,27 @@ function Hero() {
                 <HeroCards />
             </div>
 
+            <div className="hero__bottom">
+                <div className="hero__socials">
+                    <a
+                        href="https://www.instagram.com/serveco_group/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de Serveco Group"
+                    >
+                        <FiInstagram />
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/company/serveco-group/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn de Serveco Group"
+                    >
+                        <FiLinkedin />
+                    </a>
+                </div>
+            </div>
         </section>
     );
 }
