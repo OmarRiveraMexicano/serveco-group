@@ -20,8 +20,7 @@ function ServiceGallery({
             <div className="service-gallery__container">
                 <header className="service-gallery__header">
                     <h2 id="service-gallery-title">
-                        Nuestro trabajo,
-                        <span> en imágenes.</span>
+                        "Book Work"
                     </h2>
                 </header>
 
