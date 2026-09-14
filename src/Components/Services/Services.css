@@ -49,7 +49,6 @@
 
     font-size: 0.78rem;
     font-weight: 600;
-
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
@@ -60,13 +59,9 @@
     margin: 1rem 0 0;
 
     font-family: "Playfair Display", Georgia, serif;
-
     font-size: clamp(3.5rem, 6vw, 6.7rem);
-
     font-weight: 500;
-
     line-height: 0.95;
-
     letter-spacing: -0.05em;
 }
 
@@ -82,7 +77,6 @@
     color: rgba(255, 255, 255, 0.55);
 
     font-size: 1rem;
-
     line-height: 1.8;
 }
 
@@ -93,14 +87,12 @@
 
 .services__layout {
     display: grid;
-
     grid-template-columns: 0.38fr 1fr;
 
-    border: 1px solid rgba(255, 255, 255, 0.11);
-
-    border-radius: 20px;
-
     overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
 
     background: rgba(7, 20, 38, 0.55);
 }
@@ -116,34 +108,35 @@
 
 .services__tab {
     width: 100%;
-
     min-height: 96px;
 
     padding: 1.4rem 1.5rem;
 
     display: grid;
-
     grid-template-columns: auto 1fr auto;
-
     align-items: center;
 
     gap: 1rem;
 
     border: 0;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     background: transparent;
 
     color: rgba(255, 255, 255, 0.5);
 
+    font-family: "Manrope", Arial, sans-serif;
     text-align: left;
 
     cursor: pointer;
 
+    appearance: none;
+    -webkit-appearance: none;
+
     transition:
         color 0.25s ease,
-        background-color 0.25s ease;
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .services__tab:last-child {
@@ -158,7 +151,6 @@
 
 .services__tab strong {
     font-size: 0.92rem;
-
     font-weight: 500;
 }
 
@@ -199,7 +191,6 @@
     min-width: 0;
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     animation: servicePanelEnter 0.4s ease;
@@ -220,7 +211,6 @@
 
 .services__media img {
     position: absolute;
-
     inset: 0;
 
     width: 100%;
@@ -231,7 +221,6 @@
 
 .services__media-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -244,17 +233,15 @@
 
 .services__media > span {
     position: absolute;
-
     left: 2rem;
     bottom: 1.5rem;
 
     z-index: 2;
 
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 4rem;
-
     color: rgba(255, 255, 255, 0.75);
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4rem;
 }
 
 
@@ -266,9 +253,7 @@
     padding: 3.5rem;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
@@ -276,13 +261,9 @@
     margin: 1rem 0 1.3rem;
 
     font-family: "Playfair Display", Georgia, serif;
-
     font-size: clamp(2.5rem, 3.5vw, 4rem);
-
     font-weight: 500;
-
     line-height: 1;
-
     letter-spacing: -0.04em;
 }
 
@@ -296,11 +277,9 @@
 
 .services__content ul {
     margin: 2rem 0;
-
     padding: 0;
 
     display: grid;
-
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 0.9rem 1.5rem;
@@ -310,7 +289,6 @@
 
 .services__content li {
     display: flex;
-
     align-items: flex-start;
 
     gap: 0.7rem;
@@ -318,11 +296,12 @@
     color: rgba(255, 255, 255, 0.8);
 
     font-size: 0.86rem;
-
     line-height: 1.45;
 }
 
 .services__content li span {
+    flex-shrink: 0;
+
     color: #4e8df9;
 }
 
@@ -334,16 +313,14 @@
 .services__link {
     width: fit-content;
 
-    display: inline-flex;
+    padding: 0.95rem 1.3rem;
 
+    display: inline-flex;
     align-items: center;
 
     gap: 1rem;
 
-    padding: 0.95rem 1.3rem;
-
     border: 1px solid rgba(92, 144, 235, 0.45);
-
     border-radius: 8px;
 
     color: #fff;
@@ -352,10 +329,13 @@
 
     transition:
         background-color 0.25s ease,
+        border-color 0.25s ease,
         transform 0.25s ease;
 }
 
 .services__link:hover {
+    border-color: #2769dc;
+
     background: #2769dc;
 
     transform: translateY(-3px);
@@ -370,14 +350,12 @@
     margin-top: 2rem;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
-    border-radius: 14px;
-
     overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
 }
 
 .services__values > div {
@@ -396,7 +374,6 @@
 
 .services__values strong {
     font-size: 0.84rem;
-
     font-weight: 600;
 }
 
@@ -404,159 +381,236 @@
     color: rgba(255, 255, 255, 0.45);
 
     font-size: 0.75rem;
-
     line-height: 1.5;
 }
 
 
 /* =========================
-   CLIENTS
+   CLIENTS CAROUSEL
 ========================= */
 
 .services__clients {
-    margin-top: 7rem;
-}
+    position: relative;
 
-
-/* =========================
-   CLIENTS HEADER
-========================= */
-
-.services__clients-header {
-    margin-bottom: 2rem;
-}
-
-.services__clients-header h3 {
-    margin: 0.8rem 0 0;
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: clamp(2.8rem, 4vw, 4.5rem);
-
-    font-weight: 500;
-
-    line-height: 1;
-
-    letter-spacing: -0.04em;
-
-    color: #fff;
-}
-
-
-/* =========================
-   CLIENTS HORIZONTAL STRIP
-========================= */
-
-.services__clients-strip {
     width: 100%;
 
-    display: flex;
+    box-sizing: border-box;
 
+    margin-top: 1.25rem;
+    padding: 1.5rem 0;
+
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
     align-items: center;
 
-    gap: 0;
+    gap: 2rem;
 
-    overflow-x: auto;
+    overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-radius: 14px;
-
-    background: rgba(255, 255, 255, 0.02);
-
-    scrollbar-width: thin;
-
-    scrollbar-color:
-        rgba(255, 255, 255, 0.2)
-        transparent;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 20, 39, 0.42),
+            rgba(5, 14, 29, 0.1)
+        );
 }
 
 
 /* =========================
-   CLIENT
+   CLIENTS HEADING
+========================= */
+
+.services__clients-heading {
+    position: relative;
+    z-index: 3;
+
+    padding-left: 1.4rem;
+}
+
+.services__clients-heading > span {
+    display: block;
+
+    margin-bottom: 0.45rem;
+
+    color: #578bed;
+
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.services__clients-heading h3 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   CLIENTS VIEWPORT
+========================= */
+
+.services__clients-viewport {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent,
+            #000 5%,
+            #000 95%,
+            transparent
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent,
+            #000 5%,
+            #000 95%,
+            transparent
+        );
+}
+
+
+/* =========================
+   CLIENTS TRACK
+========================= */
+
+.services__clients-track {
+    width: max-content;
+
+    display: flex;
+    align-items: center;
+
+    animation:
+        clientsMarquee
+        25s
+        linear
+        infinite;
+
+    will-change: transform;
+}
+
+.services__clients-viewport:hover
+.services__clients-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================
+   CLIENTS TWO ROWS
+========================= */
+
+.services__clients-group {
+    display: grid;
+
+    grid-template-rows: repeat(2, 70px);
+    grid-auto-columns: 135px;
+    grid-auto-flow: column;
+
+    gap: 0.7rem;
+
+    padding-right: 0.7rem;
+}
+
+
+/* =========================
+   CLIENT CARD
 ========================= */
 
 .services__client {
-    flex: 1 0 150px;
+    width: 135px;
+    height: 70px;
 
-    min-width: 150px;
+    box-sizing: border-box;
 
-    height: 105px;
-
-    padding: 1.2rem 1.5rem;
+    padding: 0.7rem 0.9rem;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
-    border-right:
-        1px solid
-        rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7f8fa,
+            #e6ebf2
+        );
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
-
-.services__client:last-child {
-    border-right: 0;
-}
-
-
-/* =========================
-   CLIENT LOGO
-========================= */
 
 .services__client img {
     display: block;
 
-    width: auto;
-
-    height: auto;
-
-    max-width: 125px;
-
-    max-height: 52px;
+    width: 100%;
+    height: 40px;
 
     object-fit: contain;
 
-    /*
-       Importante:
-       NO grayscale
-       NO brightness
-       NO opacity
-       Los logos conservan su color original.
-    */
-
     filter: none;
-
     opacity: 1;
+
+    user-select: none;
+    -webkit-user-drag: none;
 
     transition: transform 0.25s ease;
 }
 
+.services__client:hover {
+    border-color: rgba(91, 142, 232, 0.5);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.22);
+
+    transform: translateY(-2px);
+}
+
 .services__client:hover img {
-    transform: scale(1.06);
-}
-
-
-/* Scrollbar */
-
-.services__clients-strip::-webkit-scrollbar {
-    height: 5px;
-}
-
-.services__clients-strip::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.services__clients-strip::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-
-    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.04);
 }
 
 
 /* =========================
-   ANIMATION
+   FOCUS
+========================= */
+
+.services__tab:focus-visible,
+.services__link:focus-visible,
+.services__client:focus-visible {
+    outline: 2px solid #7194ff;
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   ANIMATIONS
 ========================= */
 
 @keyframes servicePanelEnter {
@@ -573,13 +627,22 @@
     }
 }
 
+@keyframes clientsMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 1050px) {
-
     .services__layout {
         grid-template-columns: 1fr;
     }
@@ -588,22 +651,28 @@
         display: flex;
 
         overflow-x: auto;
+        overflow-y: hidden;
 
         border-right: 0;
-
         border-bottom:
             1px solid
             rgba(255, 255, 255, 0.1);
+
+        scrollbar-width: none;
+    }
+
+    .services__tabs::-webkit-scrollbar {
+        display: none;
     }
 
     .services__tab {
         flex: 0 0 220px;
 
-        border-bottom: 0;
-
         border-right:
             1px solid
             rgba(255, 255, 255, 0.08);
+
+        border-bottom: 0;
     }
 
     .services__tab--active {
@@ -613,13 +682,27 @@
     }
 
     .services__clients {
-        margin-top: 6rem;
+        grid-template-columns: 200px minmax(0, 1fr);
+
+        gap: 1rem;
+    }
+
+    .services__clients-heading h3 {
+        font-size: 1.25rem;
+    }
+
+    .services__clients-group {
+        grid-template-rows: repeat(2, 66px);
+        grid-auto-columns: 125px;
     }
 
     .services__client {
-        flex-basis: 140px;
+        width: 125px;
+        height: 66px;
+    }
 
-        min-width: 140px;
+    .services__client img {
+        height: 37px;
     }
 }
 
@@ -629,25 +712,20 @@
 ========================= */
 
 @media (max-width: 800px) {
-
     .services {
         padding: 6rem 0;
     }
 
     .services__container {
-        width:
-            min(
-                calc(100% - 3rem),
-                1400px
-            );
+        width: min(calc(100% - 3rem), 1400px);
     }
 
     .services__header {
+        margin-bottom: 3rem;
+
         grid-template-columns: 1fr;
 
         gap: 2rem;
-
-        margin-bottom: 3rem;
     }
 
     .services__panel {
@@ -671,32 +749,102 @@
             1px solid
             rgba(255, 255, 255, 0.1);
     }
+}
 
 
-    /* CLIENTS */
+/* =========================
+   MOBILE CLIENTS TOUCH
+========================= */
 
+@media (max-width: 650px) {
     .services__clients {
-        margin-top: 5rem;
+        margin-top: 1rem;
+        padding: 1.25rem 0 1rem;
+
+        display: block;
     }
 
-    .services__clients-header {
-        margin-bottom: 1.6rem;
+    .services__clients-heading {
+        padding: 0 1rem;
+    }
+
+    .services__clients-heading h3 {
+        font-size: 1.3rem;
+    }
+
+    .services__clients-heading h3 br {
+        display: none;
+    }
+
+    .services__clients-viewport {
+        margin-top: 1rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        mask-image: none;
+        -webkit-mask-image: none;
+
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 1rem;
+
+        overscroll-behavior-inline: contain;
+
+        -webkit-overflow-scrolling: touch;
+
+        touch-action: pan-x;
+
+        scrollbar-width: none;
+    }
+
+    .services__clients-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .services__clients-track {
+        padding: 0 1rem;
+
+        animation: none;
+    }
+
+    .services__clients-group--copy {
+        display: none;
+    }
+
+    .services__clients-group {
+        grid-template-rows: repeat(2, 64px);
+        grid-auto-columns: 118px;
+
+        gap: 0.65rem;
+
+        padding: 0 1rem 0 0;
     }
 
     .services__client {
-        flex: 0 0 135px;
+        width: 118px;
+        height: 64px;
 
-        min-width: 135px;
+        padding: 0.65rem 0.8rem;
 
-        height: 95px;
+        border-radius: 9px;
 
-        padding: 1rem;
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
     }
 
     .services__client img {
-        max-width: 110px;
+        height: 35px;
+    }
 
-        max-height: 48px;
+    .services__client:hover {
+        box-shadow:
+            0 8px 18px rgba(0, 0, 0, 0.14);
+
+        transform: none;
+    }
+
+    .services__client:hover img {
+        transform: none;
     }
 }
 
@@ -706,18 +854,12 @@
 ========================= */
 
 @media (max-width: 550px) {
-
     .services__container {
         width: calc(100% - 2.4rem);
     }
 
     .services__header h2 {
-        font-size:
-            clamp(
-                3rem,
-                14vw,
-                4.5rem
-            );
+        font-size: clamp(3rem, 14vw, 4.5rem);
     }
 
     .services__media {
@@ -732,16 +874,12 @@
         grid-template-columns: 1fr;
     }
 
-
-    /* VALUES */
-
     .services__values {
         grid-template-columns: 1fr;
     }
 
     .services__values > div {
         border-right: 0;
-
         border-bottom:
             1px solid
             rgba(255, 255, 255, 0.1);
@@ -751,46 +889,12 @@
         border-bottom: 0;
     }
 
-
-    /* CLIENTS */
-
-    .services__clients {
-        margin-top: 4.5rem;
+    .services__clients-heading > span {
+        font-size: 0.58rem;
     }
 
-    .services__clients-header {
-        margin-bottom: 1.5rem;
-    }
-
-    .services__clients-header h3 {
-        font-size:
-            clamp(
-                2.3rem,
-                10vw,
-                3.4rem
-            );
-
-        line-height: 1.05;
-    }
-
-    .services__clients-strip {
-        border-radius: 12px;
-    }
-
-    .services__client {
-        flex: 0 0 120px;
-
-        min-width: 120px;
-
-        height: 85px;
-
-        padding: 0.9rem;
-    }
-
-    .services__client img {
-        max-width: 95px;
-
-        max-height: 42px;
+    .services__clients-heading h3 {
+        font-size: 1.2rem;
     }
 }
 
@@ -800,19 +904,18 @@
 ========================= */
 
 @media (max-width: 380px) {
+    .services__clients-group {
+        grid-template-rows: repeat(2, 60px);
+        grid-auto-columns: 110px;
+    }
 
     .services__client {
-        flex-basis: 110px;
-
-        min-width: 110px;
-
-        height: 80px;
+        width: 110px;
+        height: 60px;
     }
 
     .services__client img {
-        max-width: 90px;
-
-        max-height: 40px;
+        height: 32px;
     }
 }
 
@@ -822,11 +925,27 @@
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-
     .services__panel,
+    .services__tab,
+    .services__tab-arrow,
+    .services__link,
+    .services__client,
     .services__client img {
         animation: none;
-
         transition: none;
+    }
+
+    .services__clients-track {
+        animation: none;
+    }
+
+    .services__clients-viewport {
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .services__clients-group--copy {
+        display: none;
     }
 }

@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./Services.css";
-
 import { getAssetUrl } from "../utils/getAssetUrl.js";
 import usePageTitle from "../hooks/usePageTitle.js";
 
+import "./Services.css";
+
+
+/* =========================
+   SERVICES DATA
+========================= */
 
 const services = [
     {
@@ -28,7 +32,6 @@ const services = [
         image: "/images/rh.png",
         path: "/servicios/rh",
     },
-
     {
         id: "catering",
         number: "02",
@@ -49,7 +52,6 @@ const services = [
         image: "/images/catering.png",
         path: "/servicios/catering",
     },
-
     {
         id: "equipo-proteccion",
         number: "03",
@@ -70,7 +72,6 @@ const services = [
         image: "/images/proteccion.png",
         path: "/servicios/equipo-proteccion",
     },
-
     {
         id: "publicidad",
         number: "04",
@@ -91,7 +92,6 @@ const services = [
         image: "/images/publicidad.png",
         path: "/servicios/publicidad",
     },
-
     {
         id: "prosalud",
         number: "05",
@@ -115,41 +115,93 @@ const services = [
 ];
 
 
+/* =========================
+   CLIENTS DATA
+========================= */
+
 const clients = [
     {
+        id: 1,
         name: "Allianz",
         logo: "/images/clients/allianz.png",
     },
-
     {
+        id: 2,
         name: "Amazon",
         logo: "/images/clients/amazon.png",
     },
-
     {
+        id: 3,
         name: "Bridgestone",
         logo: "/images/clients/bridgestone.png",
     },
-
     {
+        id: 4,
         name: "Coca-Cola",
-        logo: "/images/clients/cocacola.jpg",
+        logo: "/images/clients/cocacola.png",
     },
-
     {
+        id: 5,
         name: "MetLife",
         logo: "/images/clients/metlife.png",
     },
-
     {
+        id: 6,
+        name: "Totalplay",
+        logo: "/images/clients/totalplay.png",
+    },
+    {
+        id: 7,
+        name: "DB Menos",
+        logo: "/images/clients/db.png",
+    },
+    {
+        id: 8,
+        name: "Crediclub",
+        logo: "/images/clients/crediclub.png",
+    },
+    {
+        id: 9,
+        name: "AXA",
+        logo: "/images/clients/axa.png",
+    },
+    {
+        id: 10,
+        name: "Quálitas",
+        logo: "/images/clients/qualitas.png",
+    },
+    {
+        id: 11,
+        name: "Michelin",
+        logo: "/images/clients/michelin.png",
+    },
+    {
+        id: 12,
+        name: "Argos",
+        logo: "/images/clients/saludArgos.png",
+    },
+    {
+        id: 13,
         name: "Nissan",
         logo: "/images/clients/nissan.png",
+    },
+    {
+        id: 14,
+        name: "trimex",
+        logo: "/images/clients/trimex.png",
     }
+
 ];
 
 
+/* =========================
+   COMPONENT
+========================= */
+
 function Services() {
-    const [activeService, setActiveService] = useState(services[0]);
+    const [activeService, setActiveService] =
+        useState(services[0]);
+
     usePageTitle("Servicios");
 
     return (
@@ -158,7 +210,6 @@ function Services() {
             id="servicios"
         >
             <div className="services__container">
-
                 {/* =========================
                     HEADER
                 ========================= */}
@@ -171,24 +222,25 @@ function Services() {
 
                         <h2>
                             Un solo aliado para
-                            <span> necesidades distintas.</span>
+                            <span>
+                                {" "}
+                                necesidades distintas.
+                            </span>
                         </h2>
                     </div>
 
                     <p>
-                        Integramos servicios especializados para
-                        simplificar tu operación y generar resultados
-                        que trascienden.
+                        Integramos servicios especializados
+                        para simplificar tu operación y
+                        generar resultados que trascienden.
                     </p>
                 </header>
-
 
                 {/* =========================
                     SERVICES
                 ========================= */}
 
                 <div className="services__layout">
-
                     <div
                         className="services__tabs"
                         role="tablist"
@@ -200,15 +252,19 @@ function Services() {
                                 type="button"
                                 role="tab"
                                 aria-selected={
-                                    activeService.id === service.id
+                                    activeService.id ===
+                                    service.id
                                 }
                                 className={
-                                    activeService.id === service.id
+                                    activeService.id ===
+                                    service.id
                                         ? "services__tab services__tab--active"
                                         : "services__tab"
                                 }
                                 onClick={() =>
-                                    setActiveService(service)
+                                    setActiveService(
+                                        service
+                                    )
                                 }
                             >
                                 <span>
@@ -219,37 +275,36 @@ function Services() {
                                     {service.name}
                                 </strong>
 
-                                <span className="services__tab-arrow">
+                                <span
+                                    className="services__tab-arrow"
+                                    aria-hidden="true"
+                                >
                                     →
                                 </span>
                             </button>
                         ))}
                     </div>
 
-
                     <article
                         className="services__panel"
                         key={activeService.id}
                     >
-
                         <div className="services__media">
-
                             <img
-                                src={getAssetUrl(activeService.image)}
+                                src={getAssetUrl(
+                                    activeService.image
+                                )}
                                 alt={activeService.name}
                             />
 
                             <div className="services__media-overlay" />
 
-                            <span>
+                            <span aria-hidden="true">
                                 {activeService.number}
                             </span>
-
                         </div>
 
-
                         <div className="services__content">
-
                             <span className="services__category">
                                 {activeService.name}
                             </span>
@@ -262,12 +317,13 @@ function Services() {
                                 {activeService.description}
                             </p>
 
-
                             <ul>
                                 {activeService.capabilities.map(
                                     (capability) => (
                                         <li key={capability}>
-                                            <span>
+                                            <span
+                                                aria-hidden="true"
+                                            >
                                                 ✓
                                             </span>
 
@@ -277,41 +333,35 @@ function Services() {
                                 )}
                             </ul>
 
-
                             <Link
                                 to={activeService.path}
                                 className="services__link"
                             >
                                 Conocer el servicio
 
-                                <span>
+                                <span aria-hidden="true">
                                     →
                                 </span>
                             </Link>
-
                         </div>
-
                     </article>
-
                 </div>
-
 
                 {/* =========================
                     VALUES
                 ========================= */}
 
                 <div className="services__values">
-
                     <div>
                         <strong>
                             Enfoque humano
                         </strong>
 
                         <span>
-                            Soluciones centradas en las personas.
+                            Soluciones centradas en las
+                            personas.
                         </span>
                     </div>
-
 
                     <div>
                         <strong>
@@ -319,10 +369,10 @@ function Services() {
                         </strong>
 
                         <span>
-                            Objetivos claros y seguimiento continuo.
+                            Objetivos claros y seguimiento
+                            continuo.
                         </span>
                     </div>
-
 
                     <div>
                         <strong>
@@ -330,10 +380,10 @@ function Services() {
                         </strong>
 
                         <span>
-                            Procesos profesionales y responsables.
+                            Procesos profesionales y
+                            responsables.
                         </span>
                     </div>
-
 
                     <div>
                         <strong>
@@ -344,46 +394,78 @@ function Services() {
                             Acompañamiento especializado.
                         </span>
                     </div>
-
                 </div>
 
-
                 {/* =========================
-                    CLIENTS
+                    CLIENTS CAROUSEL
                 ========================= */}
-                <div className="services__clients">
 
-                    <div className="services__clients-header">
-                        <span className="services__eyebrow">
+                <section
+                    className="services__clients"
+                    aria-labelledby="clients-title"
+                >
+                    <div className="services__clients-heading">
+                        <span>
                             Principales colaboraciones
                         </span>
 
-                        <h3>
-                            Empresas que confían en nosotros
+                        <h3 id="clients-title">
+                            Empresas que confían
+                            <br />
+                            en nosotros
                         </h3>
                     </div>
 
-                    <div className="services__clients-strip">
-                        {clients.map((client) => (
-                            <div
-                                key={client.name}
-                                className="services__client"
-                            >
-                                <img
-                                    src={getAssetUrl(client.logo)}
-                                    alt={`Logo de ${client.name}`}
-                                    loading="lazy"
-                                />
+                    <div className="services__clients-viewport">
+                        <div className="services__clients-track">
+                            {/* Lista original */}
+
+                            <div className="services__clients-group">
+                                {clients.map((client) => (
+                                    <div
+                                        className="services__client"
+                                        key={client.id}
+                                    >
+                                        <img
+                                            src={getAssetUrl(
+                                                client.logo
+                                            )}
+                                            alt={`Logo de ${client.name}`}
+                                            loading="lazy"
+                                            draggable="false"
+                                        />
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+
+                            {/* Copia para animación infinita */}
+
+                            <div
+                                className="services__clients-group services__clients-group--copy"
+                                aria-hidden="true"
+                            >
+                                {clients.map((client) => (
+                                    <div
+                                        className="services__client"
+                                        key={`copy-${client.id}`}
+                                    >
+                                        <img
+                                            src={getAssetUrl(
+                                                client.logo
+                                            )}
+                                            alt=""
+                                            loading="lazy"
+                                            draggable="false"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
+                </section>
             </div>
         </section>
     );
 }
-
 
 export default Services;
