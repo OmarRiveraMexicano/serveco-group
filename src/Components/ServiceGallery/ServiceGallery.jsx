@@ -13,6 +13,7 @@ function ServiceGallery({
     return (
         <section
             className="service-gallery"
+            
             aria-labelledby="service-gallery-title"
         >
             <div className="service-gallery__background" />
