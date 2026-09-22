@@ -16,7 +16,7 @@ function Hero() {
             className="hero"
             style={{
                 "--hero-image": `url("${getAssetUrl(
-                    "images/hero.png"
+                    "images/hero.webp"
                 )}")`,
             }}
         >

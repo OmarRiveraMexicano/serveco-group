@@ -6,7 +6,7 @@ export const heroCards = [
         category: "Recursos Humanos",
         slug: "rh",
         title: "Gestión Humana",
-        image: "/images/rh.png",
+        image: "/images/rh.webp",
     },
     {
         id: 2,
@@ -20,20 +20,20 @@ export const heroCards = [
         category: "Artículos",
         slug: "equipo-proteccion",
         title: "Equipo Protección Personal",
-        image: "/images/proteccion.png",
+        image: "/images/proteccion.webp",
     },
     {
         id: 4,
         category: "Publicidad",
         slug: "publicidad",
         title: "Artículos Publicitarios",
-        image: "/images/publicidad.png",
+        image: "/images/publicidad.webp",
     },
     {
         id: 5,
         category: "Salud",
         slug: "prosalud",
         title: "Servicios Prosalud",
-        image: "/images/salud.png",
+        image: "/images/salud.webp",
     },
 ];
