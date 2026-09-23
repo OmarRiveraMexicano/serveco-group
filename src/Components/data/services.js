@@ -1,71 +1,71 @@
 export const services = {
-rh: {
-    slug: "rh",
-    eyebrow: "Recursos Humanos",
-    title: "Gestión Humana y Organizacional",
-    description:
-        "Soluciones integrales para fortalecer a las personas, los procesos y la cultura de tu organización.",
+    rh: {
+        slug: "rh",
+        eyebrow: "Recursos Humanos",
+        title: "Gestión Humana y Organizacional",
+        description:
+            "Soluciones integrales para fortalecer a las personas, los procesos y la cultura de tu organización.",
 
-    heroImage: "/images/rh/hero.png",
+        heroImage: "/images/rh/hero.png",
 
-    galleryImages: [
-        "images/rh/administracion-personal.png",
-        "/images/rh/atraccion-integracion.png",
-        "images/rh/desarrollo-organizacional.png",
-        "images/gallery/rh/rh.webp",
-    ],
+        galleryImages: [
+            "images/rh/administracion-personal.png",
+            "/images/rh/atraccion-integracion.png",
+            "images/rh/desarrollo-organizacional.png",
+            "images/gallery/rh/rh.webp",
+        ],
 
-    sections: [
-        {
-            id: "atraccion-integracion",
-            number: "01",
-            title: "Atracción e integración",
-            description:
-                "Identificamos e integramos a las personas adecuadas para los objetivos de tu empresa.",
-            image: "/images/rh/atraccion-integracion.png",
-            items: [
-                "Reclutamiento y selección",
-                "Evaluaciones psicométricas",
-                "Perfiles especializados",
-                "Estudios socioeconómicos",
-                "Diseño de Onboarding",
-            ],
-        },
-        {
-            id: "administracion-personal",
-            number: "02",
-            title: "Administración de personal",
-            description:
-                "Optimizamos la operación de Recursos Humanos mediante procesos ordenados y confiables.",
-            image: "/images/rh/administracion-personal.png",
-            items: [
-                "Control de incidencias",
-                "Gestión documental",
-                "Políticas y procedimientos",
-                "Indicadores de Recursos Humanos",
-                "Cumplimiento laboral",
-            ],
-        },
-        {
-            id: "desarrollo-organizacional",
-            number: "03",
-            title: "Desarrollo organizacional",
-            description:
-                "Fortalecemos el desempeño, el liderazgo y la cultura de tu organización.",
-            image: "/images/rh/desarrollo-organizacional.png",
-            items: [
-                "Capacitación empresarial",
-                "Team Building",
-                "Pausas Activas",
-                "Wellness Empresarial",
-                "Evaluación de desempeño",
-                "Clima organizacional",
-                "Formación de liderazgo",
-                "Cultura y comunicación interna",
-            ],
-        },
-    ],
-},
+        sections: [
+            {
+                id: "atraccion-integracion",
+                number: "01",
+                title: "Atracción e integración",
+                description:
+                    "Identificamos e integramos a las personas adecuadas para los objetivos de tu empresa.",
+                image: "/images/rh/atraccion-integracion.png",
+                items: [
+                    "Reclutamiento y selección",
+                    "Evaluaciones psicométricas",
+                    "Perfiles especializados",
+                    "Estudios socioeconómicos",
+                    "Diseño de Onboarding",
+                ],
+            },
+            {
+                id: "administracion-personal",
+                number: "02",
+                title: "Administración de personal",
+                description:
+                    "Optimizamos la operación de Recursos Humanos mediante procesos ordenados y confiables.",
+                image: "/images/rh/administracion-personal.png",
+                items: [
+                    "Control de incidencias",
+                    "Gestión documental",
+                    "Políticas y procedimientos",
+                    "Indicadores de Recursos Humanos",
+                    "Cumplimiento laboral",
+                ],
+            },
+            {
+                id: "desarrollo-organizacional",
+                number: "03",
+                title: "Desarrollo organizacional",
+                description:
+                    "Fortalecemos el desempeño, el liderazgo y la cultura de tu organización.",
+                image: "/images/rh/desarrollo-organizacional.png",
+                items: [
+                    "Capacitación empresarial",
+                    "Team Building",
+                    "Pausas Activas",
+                    "Wellness Empresarial",
+                    "Evaluación de desempeño",
+                    "Clima organizacional",
+                    "Formación de liderazgo",
+                    "Cultura y comunicación interna",
+                ],
+            },
+        ],
+    },
 
     catering: {
         slug: "catering",
@@ -75,11 +75,46 @@ rh: {
             "Soluciones integrales para eventos corporativos.",
         heroImage: "/images/catering.png",
 
-        galleryImages: [
-            "images/gallery/catering.webp",
-            "images/gallery/banquete.jpg",
-            "images/gallery/produccion.webp",
-            "images/gallery/eventos-corporativos.webp",
+        galleryGroups: [
+            {
+                id: "coffee-break",
+                eyebrow: "Catering corporativo",
+                title: "Coffee breaks",
+                description:
+                    "Opciones gastronómicas para reuniones, capacitaciones y eventos empresariales.",
+                images: [
+                    "/images/gallery/catering/coffee-01.webp",
+                    "/images/gallery/catering/coffee-03.webp",
+                    "/images/gallery/catering/coffee-02.webp",
+                    "/images/gallery/catering/coffee-04.webp",
+                ],
+            },
+            {
+                id: "banquetes",
+                eyebrow: "Experiencias gastronómicas",
+                title: "Banquetes corporativos",
+                description:
+                    "Montajes y propuestas gastronómicas para eventos especiales.",
+                images: [
+                    "/images/gallery/catering/banquete-01.webp",
+                    "/images/gallery/catering/banquete-02.webp",
+                    "/images/gallery/catering/banquete-03.webp",
+                    "/images/gallery/catering/banquete-04.webp",
+                ],
+            },
+            {
+                id: "produccion",
+                eyebrow: "Producción integral",
+                title: "Montaje y producción",
+                description:
+                    "Mobiliario, audio, iluminación y montaje para crear experiencias completas.",
+                images: [
+                    "/images/gallery/catering/produccion-01.webp",
+                    "/images/gallery/catering/produccion-02.webp",
+                    "/images/gallery/catering/produccion-03.webp",
+                    "/images/gallery/catering/produccion-04.webp",
+                ],
+            }
         ],
 
         sections: [
@@ -89,7 +124,7 @@ rh: {
                 title: "Catering corporativo",
                 description:
                     "Propuestas gastronómicas diseñadas para cada momento de tu evento corporativo.",
-                image: "/images/catering/catering-corporativo.png",
+                image: "/images/catering/catering.webp",
                 items: [
                     "Coffee break corporativo",
                     "Lunch box corporativo",
@@ -105,7 +140,7 @@ rh: {
                 title: "Producción",
                 description:
                     "Equipo, tecnología y personal especializado para producir experiencias profesionales.",
-                image: "images/catering/produccion.png",
+                image: "images/catering/produccion.webp",
                 items: [
                     "Mobiliario",
                     "Audio",
@@ -132,205 +167,220 @@ rh: {
         ],
     },
 
-"equipo-proteccion": {
-    slug: "equipo-proteccion",
-    eyebrow: "Seguridad Industrial",
-    title: "Equipo de Protección Personal",
-    description:
-        "Protegemos lo más importante: tu equipo.",
+    "equipo-proteccion": {
+        slug: "equipo-proteccion",
+        eyebrow: "Seguridad Industrial",
+        title: "Equipo de Protección Personal",
+        description:
+            "Protegemos lo más importante: tu equipo.",
 
-    heroImage: "/images/proteccion/hero.png",
+        heroImage: "/images/proteccion/hero.png",
 
-    galleryImages: [
-        "images/gallery/proteccion/seguridad.avif",
-        "images/gallery/proteccion/lentes.webp",
-        "images/gallery/proteccion/guantes.webp",
-        "images/gallery/proteccion/nose}.webp",
-    ],
+        galleryImages: [
+            "images/gallery/proteccion/seguridad.avif",
+            "images/gallery/proteccion/lentes.webp",
+            "images/gallery/proteccion/guantes.webp",
+            "images/gallery/proteccion/nose}.webp",
+        ],
+        galleryGroups: [
+            {
+                id: "proteccion-personal",
+                eyebrow: "Equipo de protección",
+                title: "Protección personal",
+                description:
+                    "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
+                images: [
+                    "/images/gallery/proteccion/equipo-de-seguridad.jpg",
+                    "/images/gallery/proteccion/chalecos.jpg", 
+                    "/images/gallery/proteccion/guantes.jpg",
+                    "/images/gallery/proteccion/botas.jpg",
+                ],
+            },
+        ],
 
-    sections: [
-        {
-            id: "proteccion-personal",
-            number: "01",
-            title: "Protección personal",
-            description:
-                "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
-            image: "/images/proteccion/epp.png",
-            items: [
-                "Botas industriales y dieléctricas",
-                "Caretas de soldador",
-                "Cascos",
-                "Fajas",
-                "Guantes especializados",
-                "Lentes protectores",
-                "Mandiles",
-                "Protección auditiva",
-            ],
-        },
-        {
-            id: "seguridad-industrial",
-            number: "02",
-            title: "Seguridad industrial",
-            description:
-                "Soluciones para prevenir riesgos, señalizar espacios y responder ante emergencias.",
-            image: "/images/proteccion/seguridad-industrial.png",
-            items: [
-                "Guantes",
-                "Lentes de seguridad",
-                "Tapones auditivos",
-                "Cascos",
-                "Chalecos",
-                "Protector Facial",
-                "Impermeables",
-                "Botas",
-                "Ropa Desechable",
-                "Señalización Vial",
-            ],
-        },
-        {
-            id: "uniformes",
-            number: "03",
-            title: "Uniformes y equipamiento",
-            description:
-                "Vestimenta funcional adaptada a las actividades de tu personal.",
-            image: "/images/proteccion/uniformes.png",
-            items: [
-                "Uniformes industriales",
-                "Casacas",
-                "Chalecos operativos",
-                "Chalecos brigadistas",
-                "Mandiles de trabajo",
-            ],
-        },
-    ],
-},
+        sections: [
+            {
+                id: "proteccion-personal",
+                number: "01",
+                title: "Protección personal",
+                description:
+                    "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
+                image: "/images/proteccion/epp.png",
+                items: [
+                    "Botas industriales y dieléctricas",
+                    "Caretas de soldador",
+                    "Cascos",
+                    "Fajas",
+                    "Guantes especializados",
+                    "Lentes protectores",
+                    "Mandiles",
+                    "Protección auditiva",
+                ],
+            },
+            {
+                id: "seguridad-industrial",
+                number: "02",
+                title: "Seguridad industrial",
+                description:
+                    "Soluciones para prevenir riesgos, señalizar espacios y responder ante emergencias.",
+                image: "/images/proteccion/seguridad-industrial.png",
+                items: [
+                    "Guantes",
+                    "Lentes de seguridad",
+                    "Tapones auditivos",
+                    "Cascos",
+                    "Chalecos",
+                    "Protector Facial",
+                    "Impermeables",
+                    "Botas",
+                    "Ropa Desechable",
+                    "Señalización Vial",
+                ],
+            },
+            {
+                id: "uniformes",
+                number: "03",
+                title: "Uniformes y equipamiento",
+                description:
+                    "Vestimenta funcional adaptada a las actividades de tu personal.",
+                image: "/images/proteccion/uniformes.png",
+                items: [
+                    "Uniformes industriales",
+                    "Casacas",
+                    "Chalecos operativos",
+                    "Chalecos brigadistas",
+                    "Mandiles de trabajo",
+                ],
+            },
+        ],
+    },
 
-publicidad: {
-    slug: "publicidad",
-    eyebrow: "Publicidad",
-    title: "Artículos Publicitarios",
-    description:
-        "Impulsa tu marca y deja una impresión duradera.",
+    publicidad: {
+        slug: "publicidad",
+        eyebrow: "Publicidad",
+        title: "Artículos Publicitarios",
+        description:
+            "Impulsa tu marca y deja una impresión duradera.",
 
-    heroImage: "/images/publicidad/hero.png",
+        heroImage: "/images/publicidad/hero.png",
 
-    galleryImages: [
-        "images/publicidad/personalizacion.png",
-        "images/publicidad/textiles.png",
-        "images/publicidad/papeleria-exhibicion.png",
-        "images/gallery/publicidad/public.webp",
-    ],
+        galleryImages: [
+            "images/publicidad/personalizacion.png",
+            "images/publicidad/textiles.png",
+            "images/publicidad/papeleria-exhibicion.png",
+            "images/gallery/publicidad/public.webp",
+        ],
 
-    sections: [
-        {
-            id: "personalizacion",
-            number: "01",
-            title: "Personalización premium",
-            description:
-                "Técnicas de impresión y grabado adaptadas a las necesidades de tu marca.",
-            image: "/images/publicidad/personalizacion.png",
-            items: [
-                "Grabados láser",
-                "Termos",
-                "Plumas",
-                "Tazas personalizadas",
-                "Sellos",
-            ],
-        },
-        {
-            id: "textiles",
-            number: "02",
-            title: "Textiles y accesorios",
-            description:
-                "Productos funcionales que convierten tu identidad en una experiencia tangible.",
-            image: "/images/publicidad/textiles.png",
-            items: [
-                "Gorras bordadas o con DTF",
-                "Playeras impresas o serigrafiadas",
-                "Cordones publicitarios",
-                "Bolsas personalizadas",
-                "Credenciales PVC",
-                "Uniformes"
-            ],
-        },
-        {
-            id: "material-corporativo",
-            number: "03",
-            title: "Material corporativo",
-            description:
-                "Soluciones visuales para fortalecer la presencia de tu empresa.",
-            image: "/images/publicidad/papeleria-exhibicion.png",
-            items: [
-                "Agendas",
-                "Folders personalizados",
-                "Tarjetas de presentación",
-                "Banners roll up",
-                "Banderas publicitarias",
-                "Medallas"
-            ],
-        },
-    ],
-},
+        sections: [
+            {
+                id: "personalizacion",
+                number: "01",
+                title: "Personalización premium",
+                description:
+                    "Técnicas de impresión y grabado adaptadas a las necesidades de tu marca.",
+                image: "/images/publicidad/personalizacion.png",
+                items: [
+                    "Grabados láser",
+                    "Termos",
+                    "Plumas",
+                    "Tazas personalizadas",
+                    "Sellos",
+                ],
+            },
+            {
+                id: "textiles",
+                number: "02",
+                title: "Textiles y accesorios",
+                description:
+                    "Productos funcionales que convierten tu identidad en una experiencia tangible.",
+                image: "/images/publicidad/textiles.png",
+                items: [
+                    "Gorras bordadas o con DTF",
+                    "Playeras impresas o serigrafiadas",
+                    "Cordones publicitarios",
+                    "Bolsas personalizadas",
+                    "Credenciales PVC",
+                    "Uniformes"
+                ],
+            },
+            {
+                id: "material-corporativo",
+                number: "03",
+                title: "Material corporativo",
+                description:
+                    "Soluciones visuales para fortalecer la presencia de tu empresa.",
+                image: "/images/publicidad/papeleria-exhibicion.png",
+                items: [
+                    "Agendas",
+                    "Folders personalizados",
+                    "Tarjetas de presentación",
+                    "Banners roll up",
+                    "Banderas publicitarias",
+                    "Medallas"
+                ],
+            },
+        ],
+    },
 
-prosalud: {
-    slug: "prosalud",
-    eyebrow: "Bienestar Empresarial",
-    title: "Servicios Pro Salud",
-    description:
-        "Soluciones integrales para el bienestar físico, mental y nutricional de tu equipo.",
-    heroImage: "/images/salud.png",
+    prosalud: {
+        slug: "prosalud",
+        eyebrow: "Bienestar Empresarial",
+        title: "Servicios Pro Salud",
+        description:
+            "Soluciones integrales para el bienestar físico, mental y nutricional de tu equipo.",
+        heroImage: "/images/salud.png",
 
-    galleryImages: [
-        "images/prosalud/bienestar-fisico.png",
-        "images/gallery/prosalud/consulta.webp",
-        "images/gallery/prosalud/nutricion.webp",
-        "images/prosalud/bienestar-fisico.png",
-    ],
+        galleryImages: [
+            "images/prosalud/bienestar-fisico.png",
+            "images/gallery/prosalud/consulta.webp",
+            "images/gallery/prosalud/nutricion.webp",
+            "images/prosalud/bienestar-fisico.png",
+        ],
 
-    sections: [
-        {
-            id: "atencion-fisica",
-            number: "01",
-            title: "Bienestar físico",
-            description:
-                "Servicios orientados a prevenir molestias y mejorar la salud física de tus colaboradores.",
-            image: "/images/prosalud/bienestar-fisico.png",
-            items: [
-                "Fisioterapia",
-                "Quiropráctica",
-                "Optometría",
-                "Muebles ergonómicos",
-            ],
-        },
-        {
-            id: "bienestar-integral",
-            number: "02",
-            title: "Bienestar integral",
-            description:
-                "Atención especializada para impulsar hábitos saludables y bienestar emocional.",
-            image: "/images/prosalud/bienestar-integral.png",
-            items: [
-                "Terapia psicológica",
-                "Nutriología",
-                "Desayunos saludables (Lunch Box)",
-                "Talleres y cursos",
-                "Formación en bienestar integral",
-            ],
-        },
-        {
-            id: "prevencion",
-            number: "03",
-            title: "Prevención y atención",
-            description:
-                "Soluciones preventivas y suministros para cuidar la salud de tu equipo.",
-            image: "/images/prosalud/prevencion.png",
-            items: [
-                "Campañas de vacunación",
-                "Insumos médicos",
-                "Jornadas preventivas",
-                "Jornadas de salud laboral (Semana de la Salud)",
-            ],
-        },
-    ],
-},
+        sections: [
+            {
+                id: "atencion-fisica",
+                number: "01",
+                title: "Bienestar físico",
+                description:
+                    "Servicios orientados a prevenir molestias y mejorar la salud física de tus colaboradores.",
+                image: "/images/prosalud/bienestar-fisico.png",
+                items: [
+                    "Fisioterapia",
+                    "Quiropráctica",
+                    "Optometría",
+                    "Muebles ergonómicos",
+                ],
+            },
+            {
+                id: "bienestar-integral",
+                number: "02",
+                title: "Bienestar integral",
+                description:
+                    "Atención especializada para impulsar hábitos saludables y bienestar emocional.",
+                image: "/images/prosalud/bienestar-integral.png",
+                items: [
+                    "Terapia psicológica",
+                    "Nutriología",
+                    "Desayunos saludables (Lunch Box)",
+                    "Talleres y cursos",
+                    "Formación en bienestar integral",
+                ],
+            },
+            {
+                id: "prevencion",
+                number: "03",
+                title: "Prevención y atención",
+                description:
+                    "Soluciones preventivas y suministros para cuidar la salud de tu equipo.",
+                image: "/images/prosalud/prevencion.png",
+                items: [
+                    "Campañas de vacunación",
+                    "Insumos médicos",
+                    "Jornadas preventivas",
+                    "Jornadas de salud laboral (Semana de la Salud)",
+                ],
+            },
+        ],
+    },
 };

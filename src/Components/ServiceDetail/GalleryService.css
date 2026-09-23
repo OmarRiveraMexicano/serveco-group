@@ -1,0 +1,770 @@
+/* =========================
+   CATERING SLIDER
+========================= */
+
+.catering-slider {
+    width: min(1600px, 100%);
+
+    margin: 7rem auto;
+
+    overflow: hidden;
+
+    outline: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.catering-slider__header {
+    width: min(
+        1350px,
+        calc(100% - 6rem)
+    );
+
+    margin: 0 auto 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    align-items: end;
+
+    gap: 4rem;
+
+    animation:
+        cateringHeaderEnter
+        0.5s
+        ease;
+}
+
+.catering-slider__eyebrow {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: #578bed;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.catering-slider__header h2 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+    font-size: clamp(
+        3.2rem,
+        6.5vw,
+        6.4rem
+    );
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.catering-slider__header p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   STAGE
+========================= */
+
+.catering-slider__stage {
+    position: relative;
+
+    min-height: 590px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    touch-action: pan-y;
+}
+
+/* =========================
+   MAIN SLIDE
+========================= */
+
+.catering-slider__slide {
+    position: relative;
+    z-index: 2;
+
+    width: min(
+        1080px,
+        calc(100% - 10rem)
+    );
+    height: clamp(
+        480px,
+        48vw,
+        590px
+    );
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.13);
+    border-radius: 20px;
+
+    background: #061226;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.42);
+
+    animation:
+        cateringSlideEnter
+        0.55s
+        ease;
+}
+
+.catering-slider__image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+     * La imagen llena toda la tarjeta
+     * sin fondos desenfocados.
+     */
+    object-fit: cover;
+    object-position: center;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+.catering-slider__slide::after {
+    position: absolute;
+    inset: 0;
+
+    content: "";
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(2, 7, 18, 0.92) 0%,
+            rgba(2, 7, 18, 0.25) 27%,
+            transparent 52%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CAPTION
+========================= */
+
+.catering-slider__caption {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.7rem;
+    left: 2rem;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.catering-slider__caption div {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.catering-slider__caption div > span {
+    color: #79a5f5;
+
+    font-size: 0.78rem;
+}
+
+.catering-slider__caption strong {
+    color: #fff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.catering-slider__caption > span {
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   SIDE PREVIEWS
+========================= */
+
+.catering-slider__preview {
+    position: absolute;
+    top: 50%;
+
+    z-index: 1;
+
+    width: 300px;
+    aspect-ratio: 4 / 3;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    background: #061226;
+
+    opacity: 0.48;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transform:
+        translateY(-50%)
+        scale(0.92);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.catering-slider__preview--previous {
+    left: -105px;
+}
+
+.catering-slider__preview--next {
+    right: -105px;
+}
+
+.catering-slider__preview img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+.catering-slider__preview::after {
+    position: absolute;
+    inset: 0;
+
+    content: "";
+
+    background:
+        rgba(2, 7, 18, 0.32);
+}
+
+.catering-slider__preview > span {
+    position: absolute;
+    top: 50%;
+
+    z-index: 2;
+
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    background:
+        rgba(2, 7, 18, 0.55);
+    color: #fff;
+
+    transform: translateY(-50%);
+}
+
+.catering-slider__preview--previous
+    > span {
+    right: 1.2rem;
+}
+
+.catering-slider__preview--next
+    > span {
+    left: 1.2rem;
+}
+
+.catering-slider__preview:hover {
+    opacity: 0.8;
+
+    transform:
+        translateY(-50%)
+        scale(0.96);
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.catering-slider__controls {
+    width: min(
+        1250px,
+        calc(100% - 8rem)
+    );
+
+    margin: 1.5rem auto 0;
+
+    display: grid;
+    grid-template-columns:
+        auto
+        minmax(120px, 1fr)
+        auto;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.catering-slider__counter {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.45rem;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 0.75rem;
+}
+
+.catering-slider__counter strong {
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.catering-slider__progress {
+    height: 2px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.14);
+}
+
+.catering-slider__progress-bar {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    background:
+        linear-gradient(
+            to right,
+            #578bed,
+            #8bb0f5
+        );
+
+    transform-origin: left;
+
+    animation:
+        cateringSliderProgress
+        4.5s
+        linear
+        forwards;
+}
+
+.catering-slider__progress-bar--paused {
+    animation-play-state: paused;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.catering-slider__arrows {
+    display: flex;
+
+    gap: 0.65rem;
+}
+
+.catering-slider__arrows button {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border: 1px solid
+        rgba(87, 139, 237, 0.48);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.catering-slider__arrows button:hover {
+    border-color: #578bed;
+
+    background: #2769dc;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.catering-slider__categories {
+    width: min(
+        1250px,
+        calc(100% - 8rem)
+    );
+
+    margin: 1.4rem auto 0;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 0.7rem;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.catering-slider__categories::-webkit-scrollbar {
+    display: none;
+}
+
+.catering-slider__category {
+    flex-shrink: 0;
+
+    padding: 0.65rem 1rem;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.48);
+
+    font-family: inherit;
+    font-size: 0.72rem;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.catering-slider__category:hover {
+    color: #fff;
+
+    border-color:
+        rgba(87, 139, 237, 0.5);
+}
+
+.catering-slider__category--active {
+    border-color:
+        rgba(87, 139, 237, 0.65);
+
+    background:
+        rgba(39, 105, 220, 0.18);
+    color: #fff;
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.catering-slider__preview:focus-visible,
+.catering-slider__arrows
+    button:focus-visible,
+.catering-slider__category:focus-visible {
+    outline: 2px solid #79a5f5;
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes cateringSlideEnter {
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(35px)
+            scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+}
+
+@keyframes cateringHeaderEnter {
+    from {
+        opacity: 0;
+
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes cateringSliderProgress {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+    .catering-slider__stage {
+        min-height: 560px;
+    }
+
+    .catering-slider__slide {
+        width: calc(100% - 4rem);
+        height: 560px;
+    }
+
+    .catering-slider__preview {
+        width: 190px;
+    }
+
+    .catering-slider__preview--previous {
+        left: -105px;
+    }
+
+    .catering-slider__preview--next {
+        right: -105px;
+    }
+
+    .catering-slider__controls,
+    .catering-slider__categories {
+        width: calc(100% - 4rem);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+    .catering-slider {
+        margin: 5rem auto;
+    }
+
+    .catering-slider__header {
+        width: calc(100% - 2rem);
+
+        margin-bottom: 1.5rem;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .catering-slider__header h2 {
+        font-size: clamp(
+            2.8rem,
+            14vw,
+            4.4rem
+        );
+    }
+
+    .catering-slider__header p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .catering-slider__stage {
+        min-height: auto;
+
+        padding: 0 1rem;
+    }
+
+    .catering-slider__slide {
+        width: 100%;
+        height: min(72vh, 620px);
+        min-height: 440px;
+
+        border-radius: 15px;
+    }
+
+    .catering-slider__image {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .catering-slider__preview {
+        display: none;
+    }
+
+    .catering-slider__caption {
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+
+        display: block;
+    }
+
+    .catering-slider__caption div {
+        display: grid;
+
+        gap: 0.35rem;
+    }
+
+    .catering-slider__caption > span {
+        display: none;
+    }
+
+    .catering-slider__controls {
+        width: calc(100% - 2rem);
+
+        grid-template-columns:
+            auto
+            1fr
+            auto;
+
+        gap: 0.8rem;
+    }
+
+    .catering-slider__arrows button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .catering-slider__categories {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 0 1rem;
+
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+    .catering-slider__header h2 {
+        font-size: 2.65rem;
+    }
+
+    .catering-slider__slide {
+        min-height: 410px;
+    }
+
+    .catering-slider__counter {
+        gap: 0.25rem;
+    }
+
+    .catering-slider__arrows {
+        gap: 0.4rem;
+    }
+
+    .catering-slider__arrows button {
+        width: 39px;
+        height: 39px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .catering-slider__header,
+    .catering-slider__slide,
+    .catering-slider__progress-bar {
+        animation: none;
+    }
+
+    .catering-slider__preview,
+    .catering-slider__arrows button,
+    .catering-slider__category {
+        transition: none;
+    }
+}

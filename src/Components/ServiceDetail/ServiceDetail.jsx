@@ -6,11 +6,13 @@ import { getAssetUrl } from "../utils/getAssetUrl.js";
 import usePageTitle from "../hooks/usePageTitle.js";
 
 import ServiceGallery from "../ServiceGallery/ServiceGallery.jsx";
+import CateringGallery from "./GalleryService.jsx";
 
 import "./ServiceDetail.css";
 
 function ServiceDetail() {
     const { serviceSlug } = useParams();
+
     const service = services[serviceSlug];
 
     const [showScrollButton, setShowScrollButton] =
@@ -149,6 +151,7 @@ function ServiceDetail() {
      */
     const handleWhatsAppClick = (event) => {
         event.preventDefault();
+
         setShowPrivacyModal(true);
     };
 
@@ -245,11 +248,10 @@ function ServiceDetail() {
                     <section
                         key={section.id}
                         id={section.id}
-                        className={`service-section ${
-                            index % 2 !== 0
+                        className={`service-section ${index % 2 !== 0
                                 ? "service-section--reverse"
                                 : ""
-                        }`}
+                            }`}
                     >
                         <div className="service-section__content">
                             <span className="service-section__number">
@@ -263,7 +265,7 @@ function ServiceDetail() {
                             <ul
                                 className={
                                     section.id ===
-                                    "seguridad-industrial"
+                                        "seguridad-industrial"
                                         ? "service-section__items service-section__items--two-columns"
                                         : "service-section__items"
                                 }
@@ -297,11 +299,20 @@ function ServiceDetail() {
                 GALERÍA
             ========================= */}
 
-            {service.galleryImages?.length > 0 && (
-                <ServiceGallery
-                    images={service.galleryImages}
-                    serviceName={service.title}
-                />
+            {service.slug === "catering" || service.slug === "equipo-proteccion" ? (
+                service.galleryGroups?.length > 0 && (
+                    <CateringGallery
+                        groups={service.galleryGroups}
+                        serviceName={service.title}
+                    />
+                )
+            ) : (
+                service.galleryImages?.length > 0 && (
+                    <ServiceGallery
+                        images={service.galleryImages}
+                        serviceName={service.title}
+                    />
+                )
             )}
 
             {/* =========================
@@ -408,7 +419,9 @@ function ServiceDetail() {
                             <button
                                 type="button"
                                 className="privacy-modal__accept"
-                                onClick={acceptPrivacyNotice}
+                                onClick={
+                                    acceptPrivacyNotice
+                                }
                             >
                                 Aceptar y continuar
 
