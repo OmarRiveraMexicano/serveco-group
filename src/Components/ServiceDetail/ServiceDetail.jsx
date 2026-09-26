@@ -299,7 +299,7 @@ function ServiceDetail() {
                 GALERÍA
             ========================= */}
 
-            {service.slug === "catering" || service.slug === "equipo-proteccion" ? (
+            {service.slug === "catering" || service.slug === "equipo-proteccion" || service.slug === "publicidad" ? (
                 service.galleryGroups?.length > 0 && (
                     <CateringGallery
                         groups={service.galleryGroups}

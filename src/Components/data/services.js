@@ -270,6 +270,21 @@ export const services = {
             "images/publicidad/papeleria-exhibicion.png",
             "images/gallery/publicidad/public.webp",
         ],
+        galleryGroups: [
+  {
+    id: "articulos-publicitarios",
+    eyebrow: "Publicidad",
+    title: "Artículos Publicitarios",
+    description: "Impulsa tu marca y deja una impresión duradera.",
+    images: [
+        "/images/gallery/publicidad/vidrio.jpg",
+      "/images/gallery/publicidad/playeras.jpg",
+      "/images/gallery/publicidad/termos.jpg",
+      "/images/gallery/publicidad/medallas.jpg",
+      "/images/gallery/publicidad/medallas.jpg"
+    ],
+  },
+],
 
         sections: [
             {
