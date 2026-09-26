@@ -1,3 +1,4 @@
+
 /* =========================
    CATERING SLIDER
 ========================= */
@@ -98,6 +99,7 @@
     touch-action: pan-y;
 }
 
+
 /* =========================
    MAIN SLIDE
 ========================= */
@@ -106,15 +108,13 @@
     position: relative;
     z-index: 2;
 
+    /* RECUADRO MÁS PEQUEÑO */
     width: min(
-        1080px,
-        calc(100% - 10rem)
+        900px,
+        calc(100% - 12rem)
     );
-    height: clamp(
-        480px,
-        48vw,
-        590px
-    );
+
+    height: 480px;
 
     overflow: hidden;
 
@@ -144,8 +144,8 @@
     display: block;
 
     /*
-     * La imagen llena toda la tarjeta
-     * sin fondos desenfocados.
+     * Se mantiene como estaba:
+     * la imagen llena todo el recuadro.
      */
     object-fit: cover;
     object-position: center;
@@ -594,13 +594,14 @@
 ========================= */
 
 @media (max-width: 1050px) {
+
     .catering-slider__stage {
-        min-height: 560px;
+        min-height: 520px;
     }
 
     .catering-slider__slide {
         width: calc(100% - 4rem);
-        height: 560px;
+        height: 460px;
     }
 
     .catering-slider__preview {
@@ -627,6 +628,7 @@
 ========================= */
 
 @media (max-width: 700px) {
+
     .catering-slider {
         margin: 5rem auto;
     }
@@ -662,8 +664,13 @@
 
     .catering-slider__slide {
         width: 100%;
-        height: min(72vh, 620px);
-        min-height: 440px;
+
+        /*
+         * Más pequeño en celular
+         */
+        height: 420px;
+
+        min-height: 0;
 
         border-radius: 15px;
     }
@@ -728,12 +735,18 @@
 ========================= */
 
 @media (max-width: 380px) {
+
     .catering-slider__header h2 {
         font-size: 2.65rem;
     }
 
     .catering-slider__slide {
-        min-height: 410px;
+        /*
+         * Aún más pequeño en celulares chicos
+         */
+        height: 390px;
+
+        min-height: 0;
     }
 
     .catering-slider__counter {
@@ -756,6 +769,7 @@
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     .catering-slider__header,
     .catering-slider__slide,
     .catering-slider__progress-bar {
