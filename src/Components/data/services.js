@@ -9,10 +9,10 @@ export const services = {
         heroImage: "/images/rh/hero.png",
 
         galleryImages: [
-            "images/rh/administracion-personal.png",
+            "/images/rh/administracion-personal.png",
             "/images/rh/atraccion-integracion.png",
-            "images/rh/desarrollo-organizacional.png",
-            "images/gallery/rh/rh.webp",
+            "/images/rh/desarrollo-organizacional.png",
+            "/images/gallery/rh/rh.webp",
         ],
 
         sections: [
@@ -73,6 +73,7 @@ export const services = {
         title: "Catering & Producción",
         description:
             "Soluciones integrales para eventos corporativos.",
+
         heroImage: "/images/catering.png",
 
         galleryGroups: [
@@ -114,7 +115,7 @@ export const services = {
                     "/images/gallery/catering/produccion-03.webp",
                     "/images/gallery/catering/produccion-04.webp",
                 ],
-            }
+            },
         ],
 
         sections: [
@@ -140,7 +141,7 @@ export const services = {
                 title: "Producción",
                 description:
                     "Equipo, tecnología y personal especializado para producir experiencias profesionales.",
-                image: "images/catering/produccion.webp",
+                image: "/images/catering/produccion.webp",
                 items: [
                     "Mobiliario",
                     "Audio",
@@ -177,11 +178,11 @@ export const services = {
         heroImage: "/images/proteccion/hero.png",
 
         galleryImages: [
-            "images/gallery/proteccion/seguridad.avif",
-            "images/gallery/proteccion/lentes.webp",
-            "images/gallery/proteccion/guantes.webp",
-            "images/gallery/proteccion/nose}.webp",
+            "/images/gallery/proteccion/seguridad.avif",
+            "/images/gallery/proteccion/lentes.webp",
+            "/images/gallery/proteccion/guantes.webp",
         ],
+
         galleryGroups: [
             {
                 id: "proteccion-personal",
@@ -191,7 +192,7 @@ export const services = {
                     "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
                 images: [
                     "/images/gallery/proteccion/equipo-de-seguridad.jpg",
-                    "/images/gallery/proteccion/chalecos.jpg", 
+                    "/images/gallery/proteccion/chalecos.jpg",
                     "/images/gallery/proteccion/guantes.jpg",
                     "/images/gallery/proteccion/botas.jpg",
                 ],
@@ -264,74 +265,96 @@ export const services = {
 
         heroImage: "/images/publicidad/hero.png",
 
-        galleryImages: [
-            "images/publicidad/personalizacion.png",
-            "images/publicidad/textiles.png",
-            "images/publicidad/papeleria-exhibicion.png",
-            "images/gallery/publicidad/public.webp",
-        ],
         galleryGroups: [
-  {
-    id: "articulos-publicitarios",
-    eyebrow: "Publicidad",
-    title: "Artículos Publicitarios",
-    description: "Impulsa tu marca y deja una impresión duradera.",
-    images: [
-        "/images/gallery/publicidad/vidrio.jpg",
-      "/images/gallery/publicidad/playeras.jpg",
-      "/images/gallery/publicidad/termos.jpg",
-      "/images/gallery/publicidad/medallas.jpg",
-      "/images/gallery/publicidad/medallas.jpg"
-    ],
-  },
-],
+            {
+                id: "textil-uniformes",
+                eyebrow: "Confección y branding",
+                title: "Uniformes y prendas corporativas",
+                description:
+                    "Playeras tipo polo, cuello redondo, prendas dry fit y mandiles personalizados para eventos e identidad corporativa.",
+                images: [
+                    "/images/gallery/promocionales/polo-01.webp",
+                    "/images/gallery/promocionales/playera-dryfit-01.webp",
+                    "/images/gallery/promocionales/full-print-01.webp",
+                    "/images/gallery/promocionales/mandil-01.png",
+                ],
+            },
+            {
+                id: "drinkware",
+                eyebrow: "Artículos promocionales",
+                title: "Termos, vasos y cristalería",
+                description:
+                    "Cilindros deportivos, termos de acero inoxidable, vasos térmicos personalizados y cristalería grabada.",
+                images: [
+                    "/images/gallery/promocionales/termo-dugme-01.jpg",
+                    "/images/gallery/promocionales/vaso-termico-01.jpg",
+                    "/images/gallery/promocionales/cilindros-01.jpg",
+                    "/images/gallery/promocionales/cristaleria-tarros-01.jpg",
+                ],
+            },
+            {
+                id: "oficina-accesorios",
+                eyebrow: "Merchandising & Eventos",
+                title: "Accesorios, papelería y premiación",
+                description:
+                    "Agendas, libretas, bolígrafos, lanyards, llaveros, medallas y kits de bienvenida u organizacionales.",
+                images: [
+                    "/images/gallery/promocionales/agendas-libretas-01.jpg",
+                    "/images/gallery/promocionales/boligrafos-premium-01.jpg",
+                    "/images/gallery/promocionales/cordones-llaveros-01.jpg",
+                    "/images/gallery/promocionales/kits-organizacionales-01.jpg",
+                ],
+            },
+        ],
 
         sections: [
             {
-                id: "personalizacion",
+                id: "uniformes-textil",
                 number: "01",
-                title: "Personalización premium",
+                title: "Uniformes y textil",
                 description:
-                    "Técnicas de impresión y grabado adaptadas a las necesidades de tu marca.",
-                image: "/images/publicidad/personalizacion.png",
+                    "Prendas de alta durabilidad y transpiración con personalización para empresas, eventos y carreras deportivas.",
+                image: "/images/publicidad/seccion-textil.png",
                 items: [
-                    "Grabados láser",
-                    "Termos",
-                    "Plumas",
-                    "Tazas personalizadas",
-                    "Sellos",
+                    "Playeras tipo polo (Algodón / Poliéster)",
+                    "Playeras dry fit y ultra transpirantes",
+                    "Playeras full print sublimadas",
+                    "Playeras cuello redondo (100% algodón / mezclas)",
+                    "Mandiles (tipo taquero, mesero y carnicero)",
+                    "Muñequeras de toallín e impermeables",
                 ],
             },
             {
-                id: "textiles",
+                id: "drinkware-termos",
                 number: "02",
-                title: "Textiles y accesorios",
+                title: "Termos, cilindros y vasos",
                 description:
-                    "Productos funcionales que convierten tu identidad en una experiencia tangible.",
-                image: "/images/publicidad/textiles.png",
+                    "Soluciones térmicas y recipientes en acero inoxidable, plástico y cristal con grabado o impresión de marca.",
+                image: "/images/publicidad/seccion-drinkware.jpg",
                 items: [
-                    "Gorras bordadas o con DTF",
-                    "Playeras impresas o serigrafiadas",
-                    "Cordones publicitarios",
-                    "Bolsas personalizadas",
-                    "Credenciales PVC",
-                    "Uniformes"
+                    "Termos de acero inoxidable (Dugme, Dimash, Votali, Yel)",
+                    "Vasos térmicos y tipo Stanley",
+                    "Cilindros plásticos deportivos con tapa de acero",
+                    "Vasos y copas de vidrio personalizados",
+                    "Tarros cerveceros y vasos jaiboleros",
+                    "Vasos con tapa de madera y popote",
                 ],
             },
             {
-                id: "material-corporativo",
+                id: "articulos-promocionales-kits",
                 number: "03",
-                title: "Material corporativo",
+                title: "Promocionales, oficina y kits",
                 description:
-                    "Soluciones visuales para fortalecer la presencia de tu empresa.",
-                image: "/images/publicidad/papeleria-exhibicion.png",
+                    "Artículos para ferias, eventos corporativos, reconocimiento deportivo e integración de nuevos colaboradores.",
+                image: "/images/publicidad/seccion-accesorios.png",
                 items: [
-                    "Agendas",
-                    "Folders personalizados",
-                    "Tarjetas de presentación",
-                    "Banners roll up",
-                    "Banderas publicitarias",
-                    "Medallas"
+                    "Agendas ejecutivas y libretas ecológicas",
+                    "Plumas plásticas, print y metálicas premium",
+                    "Cordones porta gafete (lanyards) y llaveros",
+                    "Medallas metálicas personalizadas (básicas y premium)",
+                    "Banners publicitarios y morrales de lona",
+                    "Gorras de microfibra, viseras y maletas deportivas",
+                    "Kits de contratación y regalos organizacionales",
                 ],
             },
         ],
@@ -343,13 +366,13 @@ export const services = {
         title: "Servicios Pro Salud",
         description:
             "Soluciones integrales para el bienestar físico, mental y nutricional de tu equipo.",
+
         heroImage: "/images/salud.png",
 
         galleryImages: [
-            "images/prosalud/bienestar-fisico.png",
-            "images/gallery/prosalud/consulta.webp",
-            "images/gallery/prosalud/nutricion.webp",
-            "images/prosalud/bienestar-fisico.png",
+            "/images/prosalud/bienestar-fisico.png",
+            "/images/gallery/prosalud/consulta.webp",
+            "/images/gallery/prosalud/nutricion.webp",
         ],
 
         sections: [

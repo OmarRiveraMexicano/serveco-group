@@ -1,16 +1,52 @@
-
 /* =========================
    CATERING SLIDER
 ========================= */
 
 .catering-slider {
+    /*
+     * Tokens: cambia aquí los colores y el
+     * tamaño del título para retematizar
+     * todo el componente.
+     */
+    --catering-accent: #578bed;
+    --catering-accent-strong: #2769dc;
+    --catering-accent-light: #79a5f5;
+    --catering-accent-soft: #8bb0f5;
+    --catering-surface: #061226;
+    --catering-overlay: 2, 7, 18;
+
+    --catering-text: #fff;
+    --catering-text-muted: rgba(255, 255, 255, 0.72);
+    --catering-border: rgba(255, 255, 255, 0.13);
+
+    --catering-heading-size: clamp(
+        3.2rem,
+        6.5vw,
+        6.4rem
+    );
+
+    /*
+     * Altura reservada para el encabezado (título de
+     * hasta 2 líneas + etiqueta), así el carrusel no
+     * "salta" al cambiar de grupo. Ajusta el 1.8 a 0.9
+     * si tus títulos siempre ocupan una sola línea.
+     */
+    --catering-header-min-height: calc(
+        var(--catering-heading-size) * 1.8 + 2rem
+    );
+
     width: min(1600px, 100%);
 
     margin: 7rem auto;
 
     overflow: hidden;
+}
 
-    outline: none;
+/* El outline se había quitado sin reemplazo:
+   ahora el foco de teclado se ve. */
+.catering-slider:focus-visible {
+    outline: 2px solid var(--catering-accent-light);
+    outline-offset: -6px;
 }
 
 
@@ -23,6 +59,7 @@
         1350px,
         calc(100% - 6rem)
     );
+    min-height: var(--catering-header-min-height);
 
     margin: 0 auto 2.5rem;
 
@@ -43,7 +80,7 @@
 
     margin-bottom: 0.8rem;
 
-    color: #578bed;
+    color: var(--catering-accent);
 
     font-size: 0.72rem;
     font-weight: 600;
@@ -56,17 +93,13 @@
 
     margin: 0;
 
-    color: #fff;
+    color: var(--catering-text);
 
     font-family:
         "Playfair Display",
         Georgia,
         serif;
-    font-size: clamp(
-        3.2rem,
-        6.5vw,
-        6.4rem
-    );
+    font-size: var(--catering-heading-size);
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: -0.055em;
@@ -77,7 +110,7 @@
 
     margin: 0;
 
-    color: rgba(255, 255, 255, 0.55);
+    color: var(--catering-text-muted);
 
     line-height: 1.8;
 }
@@ -88,9 +121,23 @@
 ========================= */
 
 .catering-slider__stage {
+    /*
+     * Medidas compartidas entre el slide y las
+     * vistas previas: las previews se calculan a
+     * partir del borde del slide, así nunca quedan
+     * escondidas por completo en anchos intermedios.
+     */
+    --catering-slide-width: min(
+        900px,
+        calc(100% - 12rem)
+    );
+    --catering-preview-width: 300px;
+    --catering-preview-tuck: 2.5rem;
+
     position: relative;
 
-    min-height: 590px;
+    /* Reemplaza el min-height fijo de 590px */
+    padding-block: 3.4rem;
 
     display: flex;
     align-items: center;
@@ -108,21 +155,18 @@
     position: relative;
     z-index: 2;
 
-    /* RECUADRO MÁS PEQUEÑO */
-    width: min(
-        900px,
-        calc(100% - 12rem)
-    );
+    width: var(--catering-slide-width);
 
-    height: 480px;
+    /* Proporción en lugar de alturas fijas */
+    aspect-ratio: 15 / 8;
+    max-height: 480px;
 
     overflow: hidden;
 
-    border: 1px solid
-        rgba(255, 255, 255, 0.13);
+    border: 1px solid var(--catering-border);
     border-radius: 20px;
 
-    background: #061226;
+    background: var(--catering-surface);
 
     box-shadow:
         0 30px 80px
@@ -134,6 +178,11 @@
         ease;
 }
 
+/* Al retroceder, el slide entra desde la izquierda */
+.catering-slider__slide--from-left {
+    animation-name: cateringSlideEnterFromLeft;
+}
+
 .catering-slider__image {
     position: absolute;
     inset: 0;
@@ -143,10 +192,7 @@
 
     display: block;
 
-    /*
-     * Se mantiene como estaba:
-     * la imagen llena todo el recuadro.
-     */
+    /* La imagen llena todo el recuadro */
     object-fit: cover;
     object-position: center;
 
@@ -164,8 +210,8 @@
     background:
         linear-gradient(
             to top,
-            rgba(2, 7, 18, 0.92) 0%,
-            rgba(2, 7, 18, 0.25) 27%,
+            rgba(var(--catering-overlay), 0.92) 0%,
+            rgba(var(--catering-overlay), 0.25) 27%,
             transparent 52%
         );
 
@@ -200,13 +246,13 @@
 }
 
 .catering-slider__caption div > span {
-    color: #79a5f5;
+    color: var(--catering-accent-light);
 
     font-size: 0.78rem;
 }
 
 .catering-slider__caption strong {
-    color: #fff;
+    color: var(--catering-text);
 
     font-size: 0.9rem;
     font-weight: 600;
@@ -215,7 +261,7 @@
 }
 
 .catering-slider__caption > span {
-    color: rgba(255, 255, 255, 0.68);
+    color: rgba(255, 255, 255, 0.8);
 
     font-size: 0.7rem;
     letter-spacing: 0.08em;
@@ -233,7 +279,7 @@
 
     z-index: 1;
 
-    width: 300px;
+    width: var(--catering-preview-width);
     aspect-ratio: 4 / 3;
 
     padding: 0;
@@ -244,7 +290,7 @@
         rgba(255, 255, 255, 0.08);
     border-radius: 16px;
 
-    background: #061226;
+    background: var(--catering-surface);
 
     opacity: 0.48;
 
@@ -262,12 +308,32 @@
         transform 0.3s ease;
 }
 
+/*
+ * En pantallas anchas se conserva la posición
+ * original (-105px). Cuando el espacio se acaba,
+ * la preview se acerca lo necesario para quedar
+ * siempre un poco escondida detrás del slide.
+ */
 .catering-slider__preview--previous {
-    left: -105px;
+    left: min(
+        -105px,
+        calc(
+            50% - var(--catering-slide-width) / 2 -
+            var(--catering-preview-width) +
+            var(--catering-preview-tuck)
+        )
+    );
 }
 
 .catering-slider__preview--next {
-    right: -105px;
+    right: min(
+        -105px,
+        calc(
+            50% - var(--catering-slide-width) / 2 -
+            var(--catering-preview-width) +
+            var(--catering-preview-tuck)
+        )
+    );
 }
 
 .catering-slider__preview img {
@@ -291,7 +357,7 @@
     content: "";
 
     background:
-        rgba(2, 7, 18, 0.32);
+        rgba(var(--catering-overlay), 0.32);
 }
 
 .catering-slider__preview > span {
@@ -311,20 +377,26 @@
     border-radius: 50%;
 
     background:
-        rgba(2, 7, 18, 0.55);
-    color: #fff;
+        rgba(var(--catering-overlay), 0.55);
+    color: var(--catering-text);
 
     transform: translateY(-50%);
 }
 
+/* La flecha se separa del borde lo que la preview
+   queda tapada por el slide, para no perderla. */
 .catering-slider__preview--previous
     > span {
-    right: 1.2rem;
+    right: calc(
+        var(--catering-preview-tuck) + 0.6rem
+    );
 }
 
 .catering-slider__preview--next
     > span {
-    left: 1.2rem;
+    left: calc(
+        var(--catering-preview-tuck) + 0.6rem
+    );
 }
 
 .catering-slider__preview:hover {
@@ -364,13 +436,13 @@
 
     gap: 0.45rem;
 
-    color: rgba(255, 255, 255, 0.42);
+    color: var(--catering-text-muted);
 
     font-size: 0.75rem;
 }
 
 .catering-slider__counter strong {
-    color: #fff;
+    color: var(--catering-text);
 
     font-size: 1rem;
     font-weight: 500;
@@ -385,6 +457,12 @@
         rgba(255, 255, 255, 0.14);
 }
 
+/*
+ * La animación de esta barra es la que manda el
+ * autoplay: al terminar, el componente pasa a la
+ * siguiente imagen (onAnimationEnd). Al pausar,
+ * la barra se congela donde estaba.
+ */
 .catering-slider__progress-bar {
     width: 100%;
     height: 100%;
@@ -394,8 +472,8 @@
     background:
         linear-gradient(
             to right,
-            #578bed,
-            #8bb0f5
+            var(--catering-accent),
+            var(--catering-accent-soft)
         );
 
     transform-origin: left;
@@ -436,7 +514,7 @@
     border-radius: 50%;
 
     background: transparent;
-    color: #fff;
+    color: var(--catering-text);
 
     font-size: 1rem;
 
@@ -452,9 +530,9 @@
 }
 
 .catering-slider__arrows button:hover {
-    border-color: #578bed;
+    border-color: var(--catering-accent);
 
-    background: #2769dc;
+    background: var(--catering-accent-strong);
 
     transform: translateY(-2px);
 }
@@ -465,6 +543,10 @@
 ========================= */
 
 .catering-slider__categories {
+    /* Necesario para calcular el scroll de la
+       categoría activa (offsetLeft). */
+    position: relative;
+
     width: min(
         1250px,
         calc(100% - 8rem)
@@ -473,13 +555,27 @@
     margin: 1.4rem auto 0;
 
     display: flex;
-    justify-content: center;
 
     gap: 0.7rem;
 
     overflow-x: auto;
 
     scrollbar-width: none;
+}
+
+/*
+ * Centrado seguro: con justify-content: center,
+ * los chips del lado izquierdo quedaban cortados e
+ * inalcanzables cuando no cabían todos. Con márgenes
+ * automáticos se centran si caben y, si no, se
+ * alinean al inicio y se puede hacer scroll.
+ */
+.catering-slider__category:first-child {
+    margin-left: auto;
+}
+
+.catering-slider__category:last-child {
+    margin-right: auto;
 }
 
 .catering-slider__categories::-webkit-scrollbar {
@@ -496,7 +592,7 @@
     border-radius: 999px;
 
     background: transparent;
-    color: rgba(255, 255, 255, 0.48);
+    color: var(--catering-text-muted);
 
     font-family: inherit;
     font-size: 0.72rem;
@@ -513,7 +609,7 @@
 }
 
 .catering-slider__category:hover {
-    color: #fff;
+    color: var(--catering-text);
 
     border-color:
         rgba(87, 139, 237, 0.5);
@@ -525,7 +621,7 @@
 
     background:
         rgba(39, 105, 220, 0.18);
-    color: #fff;
+    color: var(--catering-text);
 }
 
 
@@ -537,7 +633,7 @@
 .catering-slider__arrows
     button:focus-visible,
 .catering-slider__category:focus-visible {
-    outline: 2px solid #79a5f5;
+    outline: 2px solid var(--catering-accent-light);
     outline-offset: 4px;
 }
 
@@ -552,6 +648,24 @@
 
         transform:
             translateX(35px)
+            scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+}
+
+@keyframes cateringSlideEnterFromLeft {
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-35px)
             scale(0.985);
     }
 
@@ -596,24 +710,17 @@
 @media (max-width: 1050px) {
 
     .catering-slider__stage {
-        min-height: 520px;
+        --catering-preview-width: 190px;
+
+        padding-block: 1.9rem;
     }
 
+    /* El ancho del slide ya se adapta solo
+       (100% - 12rem): así las previews laterales
+       conservan un margen visible y clicable. */
     .catering-slider__slide {
-        width: calc(100% - 4rem);
-        height: 460px;
-    }
-
-    .catering-slider__preview {
-        width: 190px;
-    }
-
-    .catering-slider__preview--previous {
-        left: -105px;
-    }
-
-    .catering-slider__preview--next {
-        right: -105px;
+        aspect-ratio: 4 / 3;
+        max-height: 460px;
     }
 
     .catering-slider__controls,
@@ -630,11 +737,21 @@
 @media (max-width: 700px) {
 
     .catering-slider {
+        --catering-heading-size: clamp(
+            2.8rem,
+            14vw,
+            4.4rem
+        );
+
         margin: 5rem auto;
     }
 
     .catering-slider__header {
         width: calc(100% - 2rem);
+
+        /* En una sola columna el título y el texto
+           ya suman altura suficiente. */
+        min-height: 0;
 
         margin-bottom: 1.5rem;
 
@@ -643,21 +760,16 @@
         gap: 1rem;
     }
 
-    .catering-slider__header h2 {
-        font-size: clamp(
-            2.8rem,
-            14vw,
-            4.4rem
-        );
-    }
-
     .catering-slider__header p {
+        /* Reserva ~3 líneas para evitar saltos */
+        min-height: calc(1.7em * 3);
+
         font-size: 0.9rem;
         line-height: 1.7;
     }
 
     .catering-slider__stage {
-        min-height: auto;
+        --catering-slide-width: 100%;
 
         padding: 0 1rem;
     }
@@ -665,12 +777,8 @@
     .catering-slider__slide {
         width: 100%;
 
-        /*
-         * Más pequeño en celular
-         */
-        height: 420px;
-
-        min-height: 0;
+        aspect-ratio: 4 / 5;
+        max-height: 460px;
 
         border-radius: 15px;
     }
@@ -724,8 +832,15 @@
         box-sizing: border-box;
 
         padding: 0 1rem;
+    }
 
-        justify-content: flex-start;
+    /* En móvil las categorías arrancan al inicio */
+    .catering-slider__category:first-child {
+        margin-left: 0;
+    }
+
+    .catering-slider__category:last-child {
+        margin-right: 0;
     }
 }
 
@@ -741,12 +856,7 @@
     }
 
     .catering-slider__slide {
-        /*
-         * Aún más pequeño en celulares chicos
-         */
-        height: 390px;
-
-        min-height: 0;
+        aspect-ratio: 5 / 6;
     }
 
     .catering-slider__counter {
@@ -774,6 +884,11 @@
     .catering-slider__slide,
     .catering-slider__progress-bar {
         animation: none;
+    }
+
+    /* Sin autoplay no hay progreso que mostrar */
+    .catering-slider__progress-bar {
+        transform: scaleX(0);
     }
 
     .catering-slider__preview,
