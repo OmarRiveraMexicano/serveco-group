@@ -84,10 +84,10 @@ export const services = {
                 description:
                     "Opciones gastronómicas para reuniones, capacitaciones y eventos empresariales.",
                 images: [
-                    "/images/gallery/catering/coffee-01.webp",
-                    "/images/gallery/catering/coffee-03.webp",
-                    "/images/gallery/catering/coffee-02.webp",
-                    "/images/gallery/catering/coffee-04.webp",
+                    "/images/gallery/catering/lunchs_box.jpg",
+                    "/images/gallery/catering/coffe-02.png",
+                    "/images/gallery/catering/coffe-03.png",
+                    "/images/gallery/catering/coffe-04.png",
                 ],
             },
             {
@@ -97,10 +97,10 @@ export const services = {
                 description:
                     "Montajes y propuestas gastronómicas para eventos especiales.",
                 images: [
-                    "/images/gallery/catering/banquete-01.webp",
-                    "/images/gallery/catering/banquete-02.webp",
-                    "/images/gallery/catering/banquete-03.webp",
-                    "/images/gallery/catering/banquete-04.webp",
+                    "/images/gallery/catering/banquete-01.png",
+                    "/images/gallery/catering/banquete-02.png",
+                    "/images/gallery/catering/banquete-03.png",
+                    "/images/gallery/catering/banquete-04.png",
                 ],
             },
             {
