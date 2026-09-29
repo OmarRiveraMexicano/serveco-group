@@ -104,6 +104,32 @@ export const services = {
                 ],
             },
             {
+                id: "canapes",
+                eyebrow: "Finger food gourmet",
+                title: "Canapés y bocadillos",
+                description:
+                    "Felicidad, sabor y excelencia en un solo bocado al alcance de tus manos para eventos exclusivos.",
+                images: [
+                    "/images/gallery/catering/canapes-01.png",
+                    "/images/gallery/catering/canapes-02.png",
+                    "/images/gallery/catering/canapes-03.png",
+                    "/images/gallery/catering/canapes-04.png",
+                ],
+            },
+            {
+                id: "taquizas",
+                eyebrow: "Tradición y sabor",
+                title: "Taquizas gourmet",
+                description:
+                    "Propuestas mexicanas tradicionales y de alta cocina, desde lo más clásico hasta montajes gourmet en bufet.",
+                images: [
+                    "/images/gallery/catering/taquiza-02.png",
+                    "/images/gallery/catering/taquiza-01.png",
+                    "/images/gallery/catering/taquiza-03.png",
+                    "/images/gallery/catering/taquiza-04.png",
+                ],
+            },
+            {
                 id: "produccion",
                 eyebrow: "Producción integral",
                 title: "Montaje y producción",
@@ -116,6 +142,19 @@ export const services = {
                     "/images/gallery/catering/produccion-04.webp",
                 ],
             },
+            {
+                id: "audio-display-video",
+                eyebrow: "Producción audiovisual",
+                title: "Audio, display y video",
+                description:
+                    "Tecnología audiovisual, pantallas a todo color y audio envolvente para congresos, conferencias y exposiciones.",
+                images: [
+                    "/images/gallery/catering/pantalla-led-escenario-01.png",
+                    "/images/gallery/catering/display-conferencia-02.png",
+                    "/images/gallery/catering/stand-experiencial-03.png",
+                    "/images/gallery/catering/panel-panelistas-04.png",
+                ],
+            }
         ],
 
         sections: [
