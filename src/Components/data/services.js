@@ -325,6 +325,19 @@ export const services = {
 
         galleryGroups: [
             {
+                id: "oficina-accesorios",
+                eyebrow: "Merchandising & Eventos",
+                title: "Accesorios, papelería y premiación",
+                description:
+                    "Agendas, libretas, bolígrafos, lanyards, llaveros, medallas y kits de bienvenida u organizacionales.",
+                images: [
+                    "images/gallery/promocionales/alsea-corporativo.png",
+                    "/images/gallery/promocionales/agendas-libretas-01.jpg",
+                    "/images/gallery/promocionales/boligrafos-premium-01.jpg",
+                    "/images/gallery/promocionales/cordones-llaveros-01.jpg",
+                ],
+            },
+            {
                 id: "textil-uniformes",
                 eyebrow: "Confección y branding",
                 title: "Uniformes y prendas corporativas",
@@ -349,20 +362,7 @@ export const services = {
                     "/images/gallery/promocionales/cilindros-01.jpg",
                     "/images/gallery/promocionales/cristaleria-tarros-01.jpg",
                 ],
-            },
-            {
-                id: "oficina-accesorios",
-                eyebrow: "Merchandising & Eventos",
-                title: "Accesorios, papelería y premiación",
-                description:
-                    "Agendas, libretas, bolígrafos, lanyards, llaveros, medallas y kits de bienvenida u organizacionales.",
-                images: [
-                    "/images/gallery/promocionales/agendas-libretas-01.jpg",
-                    "/images/gallery/promocionales/boligrafos-premium-01.jpg",
-                    "/images/gallery/promocionales/cordones-llaveros-01.jpg",
-                    "/images/gallery/promocionales/kits-organizacionales-01.jpg",
-                ],
-            },
+            }
         ],
 
         sections: [
