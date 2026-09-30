@@ -76,7 +76,24 @@ export const services = {
 
         heroImage: "/images/catering.png",
 
+
+
         galleryGroups: [
+            {
+                id: "lunch-box",
+                eyebrow: "Catering corporativo",
+                title: "Lunch box",
+                description:
+                    "Alimentos individuales listos para entregar, ideales para jornadas laborales, capacitaciones, eventos y operación en sitio.",
+                images: [
+                    "/images/gallery/catering/Kit de alimentos Alseaa.png",
+                    "/images/gallery/catering/Ensaladas Alsea.png",
+                    "/images/gallery/catering/lunchs_box.jpg",
+                    "/images/gallery/catering/lunch.png",
+                    "/images/gallery/catering/banquete-01.png",
+
+                ],
+            },
             {
                 id: "coffee-break",
                 eyebrow: "Catering corporativo",
@@ -84,10 +101,10 @@ export const services = {
                 description:
                     "Opciones gastronómicas para reuniones, capacitaciones y eventos empresariales.",
                 images: [
-                    "/images/gallery/catering/lunchs_box.jpg",
-                    "/images/gallery/catering/coffe-02.png",
-                    "/images/gallery/catering/coffe-03.png",
-                    "/images/gallery/catering/coffe-04.png",
+                    "/images/gallery/catering/coffee-03.webp",
+                    "/images/gallery/catering/coffe-05.png",
+                    "/images/gallery/catering/coffe-06.png",
+                    "/images/gallery/catering/coffe-07.png",
                 ],
             },
             {
@@ -97,10 +114,12 @@ export const services = {
                 description:
                     "Montajes y propuestas gastronómicas para eventos especiales.",
                 images: [
-                    "/images/gallery/catering/banquete-01.png",
+                    "/images/gallery/catering/Ensaladas Alsea.png",
+                
                     "/images/gallery/catering/banquete-02.png",
                     "/images/gallery/catering/banquete-03.png",
                     "/images/gallery/catering/banquete-04.png",
+                    "/images/gallery/catering/banquete-05.png",
                 ],
             },
             {
