@@ -6,12 +6,12 @@ export const services = {
         description:
             "Soluciones integrales para fortalecer a las personas, los procesos y la cultura de tu organización.",
 
-        heroImage: "/images/rh/hero.png",
+        heroImage: "/images/rh/hero.webp",
 
         galleryImages: [
-            "/images/rh/administracion-personal.png",
-            "/images/rh/atraccion-integracion.png",
-            "/images/rh/desarrollo-organizacional.png",
+            "/images/rh/administracion-personal.webp",
+            "/images/rh/atraccion-integracion.webp",
+            "/images/rh/desarrollo-organizacional.webp",
             "/images/gallery/rh/rh.webp",
         ],
 
@@ -22,7 +22,7 @@ export const services = {
                 title: "Atracción e integración",
                 description:
                     "Identificamos e integramos a las personas adecuadas para los objetivos de tu empresa.",
-                image: "/images/rh/atraccion-integracion.png",
+                image: "/images/rh/atraccion-integracion.webp",
                 items: [
                     "Reclutamiento y selección",
                     "Evaluaciones psicométricas",
@@ -37,7 +37,7 @@ export const services = {
                 title: "Administración de personal",
                 description:
                     "Optimizamos la operación de Recursos Humanos mediante procesos ordenados y confiables.",
-                image: "/images/rh/administracion-personal.png",
+                image: "/images/rh/administracion-personal.webp",
                 items: [
                     "Control de incidencias",
                     "Gestión documental",
@@ -52,7 +52,7 @@ export const services = {
                 title: "Desarrollo organizacional",
                 description:
                     "Fortalecemos el desempeño, el liderazgo y la cultura de tu organización.",
-                image: "/images/rh/desarrollo-organizacional.png",
+                image: "/images/rh/desarrollo-organizacional.webp",
                 items: [
                     "Capacitación empresarial",
                     "Team Building",
@@ -74,7 +74,7 @@ export const services = {
         description:
             "Soluciones integrales para eventos corporativos.",
 
-        heroImage: "/images/catering.png",
+        heroImage: "/images/catering.webp",
 
 
 
@@ -87,6 +87,8 @@ export const services = {
                     "Alimentos individuales listos para entregar, ideales para jornadas laborales, capacitaciones, eventos y operación en sitio.",
                 images: [
                     "/images/gallery/catering/Kit de alimentos Alseaa.png",
+                    "/images/gallery/catering/Alsea1.webp",
+                    "/images/gallery/catering/Alsea2.webp",
                     "/images/gallery/catering/Ensaladas Alsea.png",
                     "/images/gallery/catering/lunchs_box.jpg",
                     "/images/gallery/catering/lunch.png",
@@ -114,8 +116,7 @@ export const services = {
                 description:
                     "Montajes y propuestas gastronómicas para eventos especiales.",
                 images: [
-                    "/images/gallery/catering/Ensaladas Alsea.png",
-                
+
                     "/images/gallery/catering/banquete-02.png",
                     "/images/gallery/catering/banquete-03.png",
                     "/images/gallery/catering/banquete-04.png",
@@ -233,7 +234,7 @@ export const services = {
         description:
             "Protegemos lo más importante: tu equipo.",
 
-        heroImage: "/images/proteccion/hero.png",
+        heroImage: "/images/proteccion/hero.webp",
 
         galleryImages: [
             "/images/gallery/proteccion/seguridad.avif",
@@ -245,17 +246,36 @@ export const services = {
             {
                 id: "proteccion-personal",
                 eyebrow: "Equipo de protección",
-                title: "Protección personal",
+                title: "Protección personal (EPP)",
                 description:
-                    "Equipo diseñado para reducir riesgos y proteger a tus colaboradores.",
+                    "Calzado dieléctrico, cascos, guantes certificados, lentes y protección auditiva para reducir riesgos laborales.",
                 images: [
-                    "/images/gallery/proteccion/equipo-de-seguridad.jpg",
-                    "/images/gallery/proteccion/chalecos.jpg",
-                    "/images/gallery/proteccion/guantes.jpg",
-                    "/images/gallery/proteccion/botas.jpg",
+                    "/images/gallery/proteccion/epp.webp",
+                ],
+            },
+            {
+                id: "seguridad-industrial",
+                eyebrow: "Prevención en planta",
+                title: "Seguridad y señalización vial",
+                description:
+                    "Soluciones integrales de delimitación, ropa desechable, protectores faciales y equipo para respuesta ante emergencias.",
+                images: [
+                    "/images/gallery/proteccion/seguridad-vial.webp",
+
+                ],
+            },
+            {
+                id: "uniformes-operativos",
+                eyebrow: "Indumentaria técnica",
+                title: "Uniformes y chalecos operativos",
+                description:
+                    "Prendas de alta visibilidad, chalecos brigadistas, casacas y mandiles diseñados para la exigencia operativa.",
+                images: [
+                    "/images/gallery/proteccion/chalecos.webp",
                 ],
             },
         ],
+
 
         sections: [
             {
@@ -425,7 +445,7 @@ export const services = {
         description:
             "Soluciones integrales para el bienestar físico, mental y nutricional de tu equipo.",
 
-        heroImage: "/images/salud.png",
+        heroImage: "/images/salud.webp",
 
         galleryImages: [
             "/images/prosalud/bienestar-fisico.png",

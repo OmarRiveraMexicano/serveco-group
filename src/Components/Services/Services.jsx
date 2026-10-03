@@ -29,7 +29,7 @@ const services = [
             "Nóminas",
             "Team building corporativo",
         ],
-        image: "/images/rh.png",
+        image: "/images/rh.webp",
         path: "/servicios/rh",
     },
     {
@@ -49,7 +49,7 @@ const services = [
             "Eventos temáticos",
             "Salones, jardines y terrazas",
         ],
-        image: "/images/catering.png",
+        image: "/images/catering.webp",
         path: "/servicios/catering",
     },
     {
@@ -69,7 +69,7 @@ const services = [
             "Uniformes y casacas",
             "Asesoría especializada",
         ],
-        image: "/images/proteccion.png",
+        image: "/images/proteccion.webp",
         path: "/servicios/equipo-proteccion",
     },
     {
@@ -89,7 +89,7 @@ const services = [
             "Papelería corporativa",
             "Banners y banderas",
         ],
-        image: "/images/publicidad.png",
+        image: "/images/publicidad.webp",
         path: "/servicios/publicidad",
     },
     {
@@ -109,7 +109,7 @@ const services = [
             "Insumos médicos",
             "Muebles ergonómicos",
         ],
-        image: "/images/salud.png",
+        image: "/images/salud.webp",
         path: "/servicios/prosalud",
     },
 ];

@@ -13,7 +13,7 @@ export const heroCards = [
         category: "Catering",
         title: "Catering & Producción",
         slug: "catering",
-        image: "/images/cateringHero.png",
+        image: "/images/cateringHero.webp",
     },
     {
         id: 3,
