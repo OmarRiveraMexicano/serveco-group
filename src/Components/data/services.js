@@ -274,6 +274,21 @@ export const services = {
                     "/images/gallery/proteccion/chalecos.webp",
                 ],
             },
+            {
+                id: "proteccion-personal",
+                eyebrow: "Equipo de Protección Personal",
+                title: "Catálogo de protección personal",
+                description:
+                    "Calzado dieléctrico, cascos, guantes certificados, lentes y protección auditiva para la seguridad integral del trabajador.",
+                images: [
+                    "/images/gallery/proteccion/catalogo2 (1).webp",
+                    "/images/gallery/proteccion/catalogo2 (2).webp",
+                    "/images/gallery/proteccion/catalogo2 (3).webp",
+                    "/images/gallery/proteccion/catalogo2 (4).webp",
+                    "/images/gallery/proteccion/catalogo2 (5).webp",
+                    "/images/gallery/proteccion/catalogo2 (6).webp",
+                ],
+            }
         ],
 
 
