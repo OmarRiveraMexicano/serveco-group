@@ -96,6 +96,32 @@ export const services = {
 
                 ],
             },
+
+            {
+                id: "barra-sushis",
+                eyebrow: "Estaciones y barras",
+                title: "Barra de sushis",
+                description:
+                    "Rollos empanizados, tradicionales o con fruta de temporada, rellenos de proteína fresca y aderezos especiales.",
+                images: [
+                    "/images/gallery/catering/barra-sushis-01.webp",
+                    "/images/gallery/catering/barra-sushis-02.webp",
+                    "/images/gallery/catering/barra-sushis-03.webp",
+                ],
+            },
+            {
+                id: "barra-italiana",
+                eyebrow: "Estaciones y barras",
+                title: "Barra italiana",
+                description:
+                    "Variedad de pastas artesanales, ensaladas frescas con aderezos de autor y pizzas horneadas para eventos al aire libre o de gala.",
+                images: [
+                    "/images/gallery/catering/barra-italiana-01.webp",
+                    "/images/gallery/catering/barra-italiana-02.webp",
+                    "/images/gallery/catering/barra-italiana-03.webp",
+                    "/images/gallery/catering/barra-italiana-04.webp",
+                ],
+            },
             {
                 id: "coffee-break",
                 eyebrow: "Catering corporativo",
@@ -116,8 +142,6 @@ export const services = {
                 description:
                     "Montajes y propuestas gastronómicas para eventos especiales.",
                 images: [
-
-                    "/images/gallery/catering/banquete-02.png",
                     "/images/gallery/catering/banquete-03.png",
                     "/images/gallery/catering/banquete-04.png",
                     "/images/gallery/catering/banquete-05.png",
