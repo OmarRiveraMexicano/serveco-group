@@ -86,6 +86,8 @@ export const services = {
                 description:
                     "Alimentos individuales listos para entregar, ideales para jornadas laborales, capacitaciones, eventos y operación en sitio.",
                 images: [
+                    "/images/gallery/catering/platillos.png",
+                    "/images/gallery/catering/snacks.png",
                     "/images/gallery/catering/Kit de alimentos Alseaa.png",
                     "/images/gallery/catering/Alsea1.webp",
                     "/images/gallery/catering/Alsea2.webp",
